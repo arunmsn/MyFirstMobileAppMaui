@@ -1,7 +1,6 @@
 ﻿namespace MyFirstMobileApp
 {
-    public partial class MainPage : ContentPage
-    {
+    public partial class MainPage : ContentPage {
         int count = 0;
 
         public MainPage()
