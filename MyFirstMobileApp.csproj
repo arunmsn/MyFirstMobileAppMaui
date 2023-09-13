@@ -62,19 +62,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="ViewViewModels\Main\MainView.xaml.cs">
-	    <DependentUpon>MainView.xaml</DependentUpon>
-	  </Compile>
+	  <Folder Include="Models\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="ViewViewModels\Main\MainView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>
