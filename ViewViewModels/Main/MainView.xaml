@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.Main.MainView"
-             Title="MainView">
+             Title="{Binding Title}">
     
     <!-- Applying a "Style" to the buttons.
          This will provide a space between the buttons. -->
@@ -20,28 +20,19 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
             </Grid.RowDefinitions>
-            
+
             <Grid.ColumnDefinitions>
                 <!-- Set Column to * which will proportionately space out the columns -->
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            
+
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="Stack Layout" />
-            <Button Grid.Row="0"
-                    Grid.Column="1"
-                    Text="Button 0,1" />
-            <Button Grid.Row="1"
-                    Grid.Column="0"
-                    Text="Button 1,0" />
-            <Button Grid.Row="1"
-                    Grid.Column="1"
-                    Text="Button 1,1" />
+                    Text="{Binding TitleStackLayout}" />
         </Grid>
     </VerticalStackLayout>
-    
+
 </ContentPage>
 
     
