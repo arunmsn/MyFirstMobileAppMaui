@@ -19,6 +19,7 @@
                 <!-- Set Height to 50 DIPs (device-independent pixels) -->
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -29,16 +30,17 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding TitleStackLayout}" />
+                    Text="{Binding TitleStackLayout}"
+                    Command="{Binding OnLayoutsClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="" />
+                    Text="Button 0,1" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="" />
+                    Text="Button 1,0" />
             <Button Grid.Row="1"
                     Grid.Column="1"
-                    Text="" />
+                    Text="Button 1,1" />
         </Grid>
     </VerticalStackLayout>
 
