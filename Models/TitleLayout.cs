@@ -8,6 +8,7 @@ namespace MyFirstMobileApp.Models
 {
     public static class TitleLayout
     {
+        public static string StackViewTitle { get; } = "Layouts Menu";
 
     }
 }
