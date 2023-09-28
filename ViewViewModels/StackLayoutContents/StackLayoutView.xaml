@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.StackLayoutContents.StackLayoutView"
-             Title="{Binding StackViewTitle}">
+             Title="{Binding PageTitle}">
 
     <!-- Applying a "Style" to the buttons.
          This will provide a space between the buttons. -->
@@ -30,23 +30,21 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="Stack Layouts"
-                    Command="{Binding OnLayoutsClicked}"
+                    Text="{Binding StackTitle}"
                     Grid.ColumnSpan="2" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="Vertical Stack"
-                    Command="{Binding OnLayoutsClicked}" />
+                    Text="{Binding VerticalTitle}" />
             <Button Grid.Row="1"
                     Grid.Column="1"
-                    Text="Horizontal Stack"
-                    Command="{Binding OnLayoutsClicked}" />
+                    Text="{Binding HorizontalTitle}" />
             <Button Grid.Row="2"
                     Grid.Column="0"
-                    Text="Absolute Stack"
-                    Command="{Binding OnLayoutsClicked}"
+                    Text="{Binding AbsoluteTitle}"
                     Grid.ColumnSpan="2" />
         </Grid>
     </VerticalStackLayout>
     
 </ContentPage>
+
+    
