@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.InnerStackLayoutContents.InnerStackLayoutView"
+             Title="{Binding Title}">
+
+    <StackLayout>
+
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand" >
+
+            <BoxView WidthRequest="150"
+                     HeightRequest="150"
+                     Color="LightBlue" />
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="StartAndExpand"
+                     HorizontalOptions="EndAndExpand" >
+
+            <BoxView WidthRequest="200"
+                     HeightRequest="100"
+                     Color="LightGreen" />
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="EndAndExpand"
+                     HorizontalOptions="Start" >
+
+            <BoxView WidthRequest="100"
+                     HeightRequest="300"
+                     Color="Pink" />
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
