@@ -1,4 +1,4 @@
-namespace MyFirstMobileApp.ViewViewModels.InnerStackLayoutContents;
+namespace MyFirstMobileApp.ViewViewModels.Layouts.InnerStackLayoutContents;
 
 public partial class InnerStackLayoutView : ContentPage
 {

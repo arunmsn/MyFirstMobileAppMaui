@@ -62,13 +62,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ViewViewModels\InnerStackLayoutContents\InnerStackLayoutView.xaml">
+	  <MauiXaml Update="ViewViewModels\Layouts\InnerStackLayoutContents\InnerStackLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Main\MainView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\StackLayoutContents\StackLayoutView.xaml">
+	  <MauiXaml Update="ViewViewModels\Layouts\StackLayoutContents\StackLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

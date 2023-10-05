@@ -8,6 +8,6 @@ namespace MyFirstMobileApp.Models
 {
     public static class InnerTitleLayout
     {
-        public static String innerPageTitle { get; } = "Stack Layouts";
+        public static String InnerPageTitle { get; } = "Stack Layouts";
     }
 }
