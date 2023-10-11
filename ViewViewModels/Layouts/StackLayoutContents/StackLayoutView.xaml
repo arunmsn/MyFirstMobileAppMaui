@@ -21,6 +21,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -36,14 +37,22 @@
                     Command="{Binding OnLayoutsClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="{Binding VerticalTitle}" />
+                    Text="{Binding VerticalTitle}"
+                    Command="{Binding OnVerticalLayoutClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="1"
-                    Text="{Binding HorizontalTitle}" />
+                    Text="{Binding HorizontalTitle}"
+                    Command="{Binding OnHorizontalLayoutClicked}" />
             <Button Grid.Row="2"
                     Grid.Column="0"
                     Text="{Binding AbsoluteTitle}"
-                    Grid.ColumnSpan="2" />
+                    Grid.ColumnSpan="2"
+                    Command="{Binding OnAbsoluteLayoutClicked}" />
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    Text="{Binding FlexTitle}"
+                    Grid.ColumnSpan="2"
+                    Command="{Binding OnFlexLayoutClicked}" />
         </Grid>
         
     </VerticalStackLayout>

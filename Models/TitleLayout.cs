@@ -11,6 +11,8 @@
         public static string HorizontalTitle { get; } = "Horizontal Stack";
 
         public static string AbsoluteTitle { get; } = "Absolute Stack";
+
+        public static string FlexTitle { get; } = "Flex Stack";
     }
 }
 

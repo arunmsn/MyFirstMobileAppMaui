@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    public static class InnerTitleLayout
+    public static class TitleVertical
     {
-        public static String InnerPageTitle { get; } = "StackLayouts";
+        public static String VerticalTitle { get; } = "Vertical Stack Layout";
     }
 }
