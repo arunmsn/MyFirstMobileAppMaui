@@ -13,6 +13,7 @@
     </ContentPage.Resources>
 
     <VerticalStackLayout>
+        
         <!-- Sets Margin Left, Top, Right, Bottom -->
         <Grid Margin="25, 35, 20, 20">
             <Grid.RowDefinitions>
@@ -44,6 +45,7 @@
                     Text="{Binding AbsoluteTitle}"
                     Grid.ColumnSpan="2" />
         </Grid>
+        
     </VerticalStackLayout>
     
 </ContentPage>

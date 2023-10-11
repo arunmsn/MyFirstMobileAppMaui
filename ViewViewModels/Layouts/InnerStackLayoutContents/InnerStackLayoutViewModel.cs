@@ -14,7 +14,9 @@ namespace MyFirstMobileApp.ViewViewModels.Layouts.InnerStackLayoutContents
 
         public InnerStackLayoutViewModel()
         {
-            Title = TitleLayout.PageTitle;
+            InnerTitle = InnerTitleLayout.InnerPageTitle;
         }
     }
 }
+
+
