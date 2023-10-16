@@ -2,11 +2,91 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.Layouts.AbsoluteLayoutContents.AbsoluteLayoutView"
-             Title="AbsoluteLayoutView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="{Binding AbsoluteTitle}" >
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+
+        <!-- Sets Margin Left, Top, Right, Bottom -->
+        <Grid Margin="25, 35, 20, 20">
+            <Grid.RowDefinitions>
+                <!-- Set Height to 50 DIPs (device-independent pixels) -->
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <!-- Set Column to * which will proportionately space out the columns -->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button  Text="01"
+                     BackgroundColor="Red"
+                     TextColor="Blue"
+                     AbsoluteLayout.LayoutBounds="0, 0, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="02"
+                     BackgroundColor="OldLace"
+                     TextColor="Gainsboro"
+                     AbsoluteLayout.LayoutBounds="0.5, 0, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="03"
+                     BackgroundColor="AntiqueWhite"
+                     TextColor="Wheat"
+                     AbsoluteLayout.LayoutBounds="1, 0, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="04"
+                     BackgroundColor="AliceBlue"
+                     TextColor="Red"
+                     AbsoluteLayout.LayoutBounds="1.5, 0, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="05"
+                     BackgroundColor="Tan"
+                     TextColor="Yellow"
+                     AbsoluteLayout.LayoutBounds="0, 0.5, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="06"
+                     BackgroundColor="AliceBlue"
+                     TextColor="OldLace"
+                     AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="07"
+                     BackgroundColor="PaleGoldenrod"
+                     TextColor="AliceBlue"
+                     AbsoluteLayout.LayoutBounds="1, 0.5, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="08"
+                     BackgroundColor="SaddleBrown"
+                     TextColor="DarkBlue"
+                     AbsoluteLayout.LayoutBounds="1.5, 0.5, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="09"
+                     BackgroundColor="Firebrick"
+                     TextColor="Honeydew"
+                     AbsoluteLayout.LayoutBounds="0, 1, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="10"
+                     BackgroundColor="Gainsboro"
+                     TextColor="NavajoWhite"
+                     AbsoluteLayout.LayoutBounds="0.5, 1, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="11"
+                     BackgroundColor="Lavender"
+                     TextColor="Azure"
+                     AbsoluteLayout.LayoutBounds="1, 1, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+            <Button  Text="12"
+                     BackgroundColor="CadetBlue"
+                     TextColor="Beige"
+                     AbsoluteLayout.LayoutBounds="1.5, 1, 100, 25"
+                     AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" />
+        </Grid>
+    </AbsoluteLayout>
 </ContentPage>
