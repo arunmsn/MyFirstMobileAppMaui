@@ -85,4 +85,10 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="ViewViewModels\AppImages\Embedded\" />
+	  <Folder Include="ViewViewModels\AppImages\Activity\" />
+	  <Folder Include="ViewViewModels\AppImages\URI\" />
+	</ItemGroup>
+
 </Project>
