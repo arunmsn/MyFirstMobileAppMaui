@@ -12,91 +12,131 @@
 
     <AbsoluteLayout>
 
-        <Label       Text="Absolute!"
-                     AbsoluteLayout.LayoutBounds="0.5, 0.05, 100, 25"
-                     FontSize="20" />
-            <Button  Text="01"
-                     BackgroundColor="Red"
-                     TextColor="Blue"
-                     AbsoluteLayout.LayoutBounds="0.1, 0.1, 65, 45"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="02"
-                     BackgroundColor="OldLace"
-                     TextColor="Blue"
-                     Grid.Row="1"
-                     Grid.Column="1"
-                     AbsoluteLayout.LayoutBounds="0.2, 0.2, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="03"
-                     BackgroundColor="AntiqueWhite"
-                     TextColor="Purple"
-                     Grid.Row="1"
-                     Grid.Column="2"
-                     AbsoluteLayout.LayoutBounds="0.3, 0.3, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="04"
-                     BackgroundColor="AliceBlue"
-                     TextColor="Red"
-                     Grid.Row="1"
-                     Grid.Column="3"
-                     AbsoluteLayout.LayoutBounds="0.1, 0.1, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="05"
-                     BackgroundColor="Tan"
-                     TextColor="Yellow"
-                     Grid.Row="2"
-                     Grid.Column="0"
-                     AbsoluteLayout.LayoutBounds="1, 0, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="06"
-                     BackgroundColor="AliceBlue"
-                     TextColor="Black"
-                     Grid.Row="2"
-                     Grid.Column="1"
-                     AbsoluteLayout.LayoutBounds="2, 0.5, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="07"
-                     BackgroundColor="PaleGoldenrod"
-                     TextColor="Black"
-                     Grid.Row="2"
-                     Grid.Column="2"
-                     AbsoluteLayout.LayoutBounds="3, 1.0, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="08"
-                     BackgroundColor="SaddleBrown"
-                     TextColor="DarkBlue"
-                     Grid.Row="2"
-                     Grid.Column="3"
-                     AbsoluteLayout.LayoutBounds="0, 1.5, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="09"
-                     BackgroundColor="Firebrick"
-                     TextColor="Honeydew"
-                     Grid.Row="4"
-                     Grid.Column="0"
-                     AbsoluteLayout.LayoutBounds="1, 0, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="10"
-                     BackgroundColor="Gainsboro"
-                     TextColor="Orange"
-                     Grid.Row="4"
-                     Grid.Column="1"
-                     AbsoluteLayout.LayoutBounds="2, 0.5, 10, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button  Text="11"
-                     BackgroundColor="Lavender"
-                     TextColor="Salmon"
-                     Grid.Row="4"
-                     Grid.Column="2"
-                     AbsoluteLayout.LayoutBounds="3, 1.0, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
-        <Button  Text="12"
-                     BackgroundColor="CadetBlue"
-                     TextColor="Beige"
-                     Grid.Row="4"
-                     Grid.Column="3"
-                     AbsoluteLayout.LayoutBounds="3, 1.5, 100, 25"
-                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <Label      AbsoluteLayout.LayoutBounds="0.5,0.05,125,30"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    Text="Absolute!"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.10,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="#000000"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.15,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="01"
+                    FontSize="Title"
+                    TextColor="#ffffff"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.35,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#005500"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.40,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="02"
+                    FontSize="Title"
+                    TextColor="#ffaaff"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.60,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#00aa00"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.65,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="03"
+                    FontSize="Title"
+                    TextColor="#ff55ff"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.85,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#00ff00"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.90,0.2,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="04"
+                    FontSize="Title"
+                    TextColor="#ff00ff"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.10,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="#880088"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.15,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="05"
+                    FontSize="Title"
+                    TextColor="#88ff88"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.35,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#885588"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.40,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="06"
+                    FontSize="Title"
+                    TextColor="#88aa88"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.60,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#889988"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.65,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="07"
+                    FontSize="Title"
+                    TextColor="#886688"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.85,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#88ee88"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.90,0.3,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="08"
+                    FontSize="Title"
+                    TextColor="#881188"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.10,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Color="#ff11ff"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.15,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="09"
+                    FontSize="Title"
+                    TextColor="#00ee00"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.35,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#ff66ff"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.40,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="10"
+                    FontSize="Title"
+                    TextColor="#009900"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.60,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#ff99ff"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.65,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="11"
+                    FontSize="Title"
+                    TextColor="#006600"/>
+
+        <BoxView    AbsoluteLayout.LayoutBounds="0.85,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+				    Color="#ffeeff"/>
+
+        <Label      AbsoluteLayout.LayoutBounds="0.90,0.4,65,45"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    Text="12"
+                    FontSize="Title"
+                    TextColor="#001100" />
 
     </AbsoluteLayout>
     
