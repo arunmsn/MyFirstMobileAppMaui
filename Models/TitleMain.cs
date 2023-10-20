@@ -10,5 +10,6 @@ namespace MyFirstMobileApp.Models
     {
         public static String PageTitle { get; } = "Main Page View";
         public static String StackLayoutTitle { get; } = "Stack Layout";
+        public static String URIImagesTitle { get; } = "Images";
     }
 }

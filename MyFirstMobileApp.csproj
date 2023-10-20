@@ -62,6 +62,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ViewViewModels\AppImages\Embedded\EmbeddedImageView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\AppImages\ImagesMenuView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\AppImages\URIImagesXAML\URIImagesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Layouts\AbsoluteLayoutContents\AbsoluteLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -86,9 +95,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewViewModels\AppImages\Embedded\" />
 	  <Folder Include="ViewViewModels\AppImages\Activity\" />
-	  <Folder Include="ViewViewModels\AppImages\URI\" />
 	</ItemGroup>
 
 </Project>
