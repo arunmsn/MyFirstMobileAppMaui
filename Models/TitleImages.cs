@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyFirstMobileApp.ViewViewModels.AppImages
+namespace MyFirstMobileApp.Models
 {
-    class ImagesMenuViewModel
+    public static class TitleImages
     {
+        //public static string PageTitle { get; } = 
     }
 }

@@ -12,12 +12,12 @@ namespace MyFirstMobileApp.ViewViewModels.AppImages.URIImagesXAML
     {
         private ImageSource _getImageSource;
 
-        public string BubbleImageURL = TitleURIImages.BubbleImageURL;
+        public string BubbleImageURL = TitleImages.BubbleImageURL;
 
         public URIImagesViewModel()
         {
-            Title = TitleURIImages.URIImagesTitle;
-            BubbleImageURL = TitleURIImages.BubbleImageURL;
+            Title = TitleImages.URIImagesTitle;
+            BubbleImageURL = TitleImages.BubbleImageURL;
         }
 
         public ImageSource GetImageSource

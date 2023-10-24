@@ -65,7 +65,7 @@
 	  <MauiXaml Update="ViewViewModels\AppImages\Embedded\EmbeddedImageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\AppImages\ImagesMenuView.xaml">
+	  <MauiXaml Update="ViewViewModels\AppImages\ImagesMenu\ImagesMenuView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\AppImages\URIImagesXAML\URIImagesView.xaml">

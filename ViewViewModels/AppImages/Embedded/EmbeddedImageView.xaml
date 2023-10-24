@@ -2,11 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.AppImages.Embedded.EmbeddedImageView"
-             Title="EmbeddedImageView">
+             Title="{Binding Title}">
     <VerticalStackLayout>
-        <Image Source="{Binding GetImageSource}" />
+        <Image Source="{Binding GetImageSource}"
+               Aspect="AspectFit" />
     </VerticalStackLayout>
-    
-    
     
 </ContentPage>

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    class TitleURIImages
+    public static class TitleURIImages
     {
         public static String URIImagesTitle { get; } = "URI Images";
-        public static string BubbleImageURL { get; } = "https://papers.co/wallpaper/papers.co-al44-bubble-apple-watch-dark-minimal-art-34-iphone6-plus-wallpaper.jpg";
+        public static string BubbleImageURL { get; } = "https://media.idownloadblog.com/wp-content/uploads/2015/03/Bubble-Wallpaper-iPad-Air.jpg";
+
     }
 }

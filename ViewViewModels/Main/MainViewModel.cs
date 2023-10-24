@@ -1,4 +1,5 @@
 ﻿using MyFirstMobileApp.Models;
+using MyFirstMobileApp.ViewViewModels.AppImages;
 using MyFirstMobileApp.ViewViewModels.AppImages.URIImagesXAML;
 using MyFirstMobileApp.ViewViewModels.Base;
 using MyFirstMobileApp.ViewViewModels.Layouts.StackLayoutContents;
@@ -9,7 +10,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
     public class MainViewModel : BaseViewModel
     {
         public string StackLayoutTitle { get; set; } = TitleMain.StackLayoutTitle;
-        public string URIImagesTitle { get; set; } = TitleMain.URIImagesTitle;
+        public string ImagesTitle { get; set; } = TitleMain.ImagesTitle;
 
         //Button Commands
         public ICommand OnLayoutsClicked { get; set; }
@@ -19,7 +20,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         {
             Title = TitleMain.PageTitle;
             StackLayoutTitle = TitleMain.StackLayoutTitle;
-            URIImagesTitle = TitleMain.URIImagesTitle;
+            ImagesTitle = TitleMain.ImagesTitle;
 
 
             //Set Commands
@@ -34,7 +35,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
 
         private async void OnImagesClickedAsync()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new URIImagesView());
+            await Application.Current.MainPage.Navigation.PushAsync(new ImagesMenuView());
         }
     }
 }

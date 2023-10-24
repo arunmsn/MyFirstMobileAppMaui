@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModels.Main.MainView"
+             x:Class="MyFirstMobileApp.ViewViewModels.AppImages.ImagesMenuView"
              Title="{Binding Title}">
-    
-    <!-- Applying a "Style" to the buttons.
-         This will provide a space between the buttons. -->
+
     <ContentPage.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10" />
@@ -13,6 +11,7 @@
     </ContentPage.Resources>
 
     <VerticalStackLayout>
+        
         <!-- Sets Margin Left, Top, Right, Bottom -->
         <Grid Margin="25, 35, 20, 20">
             <Grid.RowDefinitions>
@@ -30,12 +29,12 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding StackLayoutTitle}"
-                    Command="{Binding OnLayoutsClicked}" />
+                    Text="{Binding URIImagesTitle}"
+                    Command="{Binding OnURIImagesClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="{Binding ImagesTitle}"
-                    Command="{Binding OnImagesClicked}" />
+                    Text="{Binding EmbeddedImagesTitle}"
+                    Command="{Binding OnEmbeddedImagesClicked}"/>
             <Button Grid.Row="1"
                     Grid.Column="0"
                     Text="Button 1,0" />
@@ -43,10 +42,7 @@
                     Grid.Column="1"
                     Text="Button 1,1" />
         </Grid>
+        
     </VerticalStackLayout>
 
 </ContentPage>
-
-    
-    
-    
