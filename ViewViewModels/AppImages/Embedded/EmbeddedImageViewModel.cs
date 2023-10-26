@@ -12,7 +12,7 @@ namespace MyFirstMobileApp.ViewViewModels.AppImages.Embedded
     {
         public EmbeddedImageViewModel() 
         {
-            Title = TitleEmbedded.EmbeddedImagesTitle;
+            Title = TitleEmbedded.EmbeddedTitle;
         }
 
         public ImageSource GetImageSource

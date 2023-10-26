@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyFirstMobileApp.Models
 {
-    public static class TitleEmbedded
+    public static class TitleActivityIndicator
     {
-        public static String EmbeddedTitle { get; } = "Embedded Images";
+        public static string ActivityIndicatorTitle { get; set; } = "Activity Indicator";
     }
 }

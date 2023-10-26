@@ -1,34 +1,34 @@
 ﻿using MyFirstMobileApp.Models;
+using MyFirstMobileApp.ViewViewModels.AppImages.Activity;
 using MyFirstMobileApp.ViewViewModels.AppImages.Embedded;
 using MyFirstMobileApp.ViewViewModels.AppImages.URIImagesXAML;
 using MyFirstMobileApp.ViewViewModels.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MyFirstMobileApp.ViewViewModels.AppImages
 {
     public class ImagesMenuViewModel : BaseViewModel
     {
-        public string URIImagesTitle { get; set; } = TitleURIImages.URIImagesTitle;
-        public string EmbeddedImagesTitle { get; set; } = TitleEmbedded.EmbeddedImagesTitle;
+        public string URIImagesTitle { get; set; } = TitleImages.URIImagesTitle;
+        public string EmbeddedTitle { get; set; } = TitleImages.EmbeddedTitle;
+        public string ActivityTitle { get; set; } = TitleImages.ActivityTitle;
 
         //Button Commands
         public ICommand OnURIImagesClicked { get; set; }
         public ICommand OnEmbeddedImagesClicked { get; set; }
+        public ICommand OnActivityIndicatorClicked { get; set; }
 
         public ImagesMenuViewModel()
         {
-            Title = TitleMain.ImagesTitle;
-            URIImagesTitle = TitleURIImages.URIImagesTitle;
-            EmbeddedImagesTitle = TitleEmbedded.EmbeddedImagesTitle;
+            Title = TitleImages.PageTitle;
+            URIImagesTitle = TitleImages.URIImagesTitle;
+            EmbeddedTitle = TitleImages.EmbeddedTitle;
+            ActivityTitle = TitleImages.ActivityTitle;
 
             //Set Commands
             OnURIImagesClicked = new Command(OnURIImagesClickedAsync);
             OnEmbeddedImagesClicked = new Command(OnEmbeddedImagesClickedAsync);
+            OnActivityIndicatorClicked = new Command(OnActivityIndicatorClickedAsync);
         }
 
         private async void OnURIImagesClickedAsync()
@@ -39,6 +39,11 @@ namespace MyFirstMobileApp.ViewViewModels.AppImages
         private async void OnEmbeddedImagesClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new EmbeddedImageView());
+        }
+
+        private async void OnActivityIndicatorClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new ActivityIndicatorView());
         }
     }
 }
