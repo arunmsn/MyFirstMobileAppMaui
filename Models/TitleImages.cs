@@ -14,3 +14,5 @@ namespace MyFirstMobileApp.Models
         public static string ActivityTitle { get; } = "Activity Indicator";
     }
 }
+
+

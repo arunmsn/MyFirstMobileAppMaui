@@ -11,3 +11,5 @@ namespace MyFirstMobileApp.Models
         public static String EmbeddedTitle { get; } = "Embedded Images";
     }
 }
+
+

@@ -29,21 +29,23 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     Text="{Binding URIImagesTitle}"
                     Command="{Binding OnURIImagesClicked}" />
-            <Button Grid.Row="0"
-                    Grid.Column="1"
-                    Text="{Binding EmbeddedTitle}"
-                    Command="{Binding OnEmbeddedImagesClicked}"/>
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="{Binding ActivityIndicatorTitle}"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding EmbeddedTitle}"
+                    Command="{Binding OnEmbeddedImagesClicked}"/>
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding ActivityTitle}"
                     Command="{Binding OnActivityIndicatorClicked}"/>
-            <Button Grid.Row="1"
-                    Grid.Column="1"
-                    Text="Button 1,1" />
         </Grid>
         
     </VerticalStackLayout>
 
 </ContentPage>
+    
+    

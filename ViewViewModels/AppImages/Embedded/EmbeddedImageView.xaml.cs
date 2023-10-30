@@ -8,3 +8,5 @@ public partial class EmbeddedImageView : ContentPage
 		BindingContext = new EmbeddedImageViewModel();
 	}
 }
+
+

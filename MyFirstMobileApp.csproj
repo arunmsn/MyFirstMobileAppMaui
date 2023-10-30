@@ -74,6 +74,9 @@
 	  <MauiXaml Update="ViewViewModels\AppImages\URIImagesXAML\URIImagesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\CollectionsContents\SWMoviesCollection\StarWarsMoviesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\Layouts\AbsoluteLayoutContents\AbsoluteLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -95,6 +98,10 @@
 	  <MauiXaml Update="ViewViewModels\Layouts\StackLayoutContents\StackLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\NewFolder\" />
 	</ItemGroup>
 
 </Project>

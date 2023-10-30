@@ -24,3 +24,5 @@ namespace MyFirstMobileApp.ViewViewModels.AppImages.Embedded
         }
     }
 }
+
+
