@@ -3,6 +3,7 @@ using MyFirstMobileApp.ViewViewModels.Base;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,23 @@ namespace MyFirstMobileApp.ViewViewModels.CollectionsContents.SWMoviesCollection
             this.LoadMovies();
         }
 
-        //to add: Title, LoadMovies()
+        private void LoadMovies()
+        {
+            try
+            {
+                //Clear the collection in the ViewModel
+                SWMoviesCollection.Clear();
+
+                foreach (var p in _swmovies)
+                {
+                    //Add the NameOfMovie property of the individual movie in the ViewModel collection
+                    SWMoviesCollection.Add(new StarWarsMovies { NameOfMovie = p.NameOfMovie });
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+        }
     }
 }

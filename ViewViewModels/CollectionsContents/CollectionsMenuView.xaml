@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModels.Main.MainView"
+             x:Class="MyFirstMobileApp.ViewViewModels.CollectionsContents.SWMoviesCollection.CollectionsMenuView"
              Title="{Binding Title}">
-    
+
     <!-- Applying a "Style" to the buttons.
-         This will provide a space between the buttons. -->
+     This will provide a space between the buttons. -->
     <ContentPage.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10" />
@@ -30,24 +30,22 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding StackLayoutTitle}"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding CollectionsTitle}"
                     Command="{Binding OnLayoutsClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="{Binding ImagesTitle}"
-                    Command="{Binding OnImagesClicked}" />
+                    Grid.ColumnSpan="2"
+                    Text=" {Binding ImagesTitle}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="{Binding CollectionsTitle}"
-                    Command="{Binding OnCollectionsClicked}"/>
+                    Grid.ColumnSpan="2"
+                    Text=" {Binding CollectionsTitle}" />
             <Button Grid.Row="1"
                     Grid.Column="1"
+                    Grid.ColumnSpan="2"
                     Text="Button 1,1" />
         </Grid>
     </VerticalStackLayout>
 
 </ContentPage>
-
-    
-    
-    

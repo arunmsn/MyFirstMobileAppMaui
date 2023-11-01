@@ -74,6 +74,9 @@
 	  <MauiXaml Update="ViewViewModels\AppImages\URIImagesXAML\URIImagesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\CollectionsContents\CollectionsMenuView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\CollectionsContents\SWMoviesCollection\StarWarsMoviesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -12,7 +12,7 @@ namespace MyFirstMobileApp.Models.Entities
 
         public StarWarsMovies() 
         { 
-            //Constructor
+            NameOfMovie = string.Empty;
         }
 
         public StarWarsMovies(string name)
@@ -25,12 +25,12 @@ namespace MyFirstMobileApp.Models.Entities
         {
             return new List<StarWarsMovies>
             {
-                new StarWarsMovies("A New Hope"),
-                new StarWarsMovies("The Empire Strikes Back"),
-                new StarWarsMovies("Return of the Jedi"),
-                new StarWarsMovies("The Phantom Menace"),
-                new StarWarsMovies("Attack of the Clones"),
-                new StarWarsMovies("Revenge of the Sith")
+                new StarWarsMovies(" A New Hope "),
+                new StarWarsMovies(" The Empire Strikes Back "),
+                new StarWarsMovies(" Return of the Jedi "),
+                new StarWarsMovies(" The Phantom Menace "),
+                new StarWarsMovies(" Attack of the Clones "),
+                new StarWarsMovies(" Revenge of the Sith ")
             };
         }
     }

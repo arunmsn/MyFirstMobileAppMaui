@@ -5,5 +5,6 @@ public partial class StarWarsMoviesView : ContentPage
 	public StarWarsMoviesView()
 	{
 		InitializeComponent();
+		BindingContext = new StarWarsMovieViewModel();
 	}
 }
