@@ -8,6 +8,8 @@ namespace MyFirstMobileApp.Models
 {
     public static class TitleCollectionsMenu
     {
+        public static string SWMoviesTitle = "Star Wars Movies";
+        public static string MoviesTitle = "Collection View";
 
     }
 }

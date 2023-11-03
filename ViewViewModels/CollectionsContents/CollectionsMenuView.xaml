@@ -30,17 +30,14 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Text="{Binding CollectionsTitle}"
-                    Command="{Binding OnLayoutsClicked}" />
+                    Text="{Binding SWMoviesTitle}"
+                    Command="{Binding OnMoviesClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    Text=" {Binding ImagesTitle}" />
+                    Text="Button" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Grid.ColumnSpan="2"
-                    Text=" {Binding CollectionsTitle}" />
+                    Text="Button" />
             <Button Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
