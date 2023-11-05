@@ -14,7 +14,7 @@
     </ContentPage.Resources>
 
     <CollectionView x:Name="ItemsListView"
-                    ItemsSource="{Binding SWCharactersCollection}"
+                    ItemsSource="{Binding SWCollection}"
                     SelectionMode="None"
                     ItemsLayout="VerticalList">
 

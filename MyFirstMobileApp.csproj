@@ -106,8 +106,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Resources\Images\StarWarsCharacters\" />
-	</ItemGroup>
-
 </Project>

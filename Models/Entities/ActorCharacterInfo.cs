@@ -21,7 +21,7 @@ namespace MyFirstMobileApp.Models.Entities
         public ActorCharacterInfo(string actorName, ImageSource actorImage, string characterName)
         {
             //Constructor with Parameters
-            ActorName = actorName;
+            ActorName = actorName; 
             ActorImage = actorImage;
             CharacterName = characterName;
         }
@@ -35,17 +35,17 @@ namespace MyFirstMobileApp.Models.Entities
             var actors = new List<ActorCharacterInfo>
             {
                 //Create ActorCharacterInfo obects with sample data
-                new ActorCharacterInfo("Ahmed Best", ImageSource.FromFile("Images/StarWarsCharacters/Binks.jpg"), "Binks"),
-                new ActorCharacterInfo("Peter Mayhew", ImageSource.FromFile("Images/StarWarsCharacters/Chewie.jpg"), "Chewie"),
-                new ActorCharacterInfo("Hayden Christensen", ImageSource.FromFile("Images/StarWarsCharacters/Vader.jpg"), "Darth Vader"),
-                new ActorCharacterInfo("Matthew Wood", ImageSource.FromFile("Images/StarWarsCharacters/Grie.jpg"), "Grievous"),
-                new ActorCharacterInfo("Harrison Ford", ImageSource.FromFile("Images/StarWarsCharacters/Solo.jpg"), "Han Solo"),
-                new ActorCharacterInfo("Carrie Fisher", ImageSource.FromFile("Images/StarWarsCharacters/Leia.jpg"), "Leia"),
-                new ActorCharacterInfo("Mark Hamill", ImageSource.FromFile("Images/StarWarsCharacters/Luke.jpg"), "Luke"),
-                new ActorCharacterInfo("Samuel L. Jackson", ImageSource.FromFile("Images/StarWarsCharacters/Windu.jpg"), "Mace Windu"),
-                new ActorCharacterInfo("Ewan McGregor", ImageSource.FromFile("Images/StarWarsCharacters/Obi.jpg"), "Obi Wan Kenobi"),
-                new ActorCharacterInfo("Ian McDiarmid", ImageSource.FromFile("Images/StarWarsCharacters/Palpatine.jpg"), "Palpatine"),
-                new ActorCharacterInfo("Frank Oz", ImageSource.FromFile("Images/StarWarsCharacters/Yoda.jpg"), "Yoda"),
+                new ActorCharacterInfo("Ahmed Best", ImageSource.FromFile("Images/binks.jpg"), "Binks"),
+                new ActorCharacterInfo("Peter Mayhew", ImageSource.FromFile("Images/chewie.jpg"), "Chewie"),
+                new ActorCharacterInfo("Hayden Christensen", ImageSource.FromFile("Images/vader.jpg"), "Darth Vader"),
+                new ActorCharacterInfo("Matthew Wood", ImageSource.FromFile("Images/grie.jpg"), "Grievous"),
+                new ActorCharacterInfo("Harrison Ford", ImageSource.FromFile("Images/solo.jpg"), "Han Solo"),
+                new ActorCharacterInfo("Carrie Fisher", ImageSource.FromFile("Images/leia.jpg"), "Leia"),
+                new ActorCharacterInfo("Mark Hamill", ImageSource.FromFile("Images/luke.jpg"), "Luke"),
+                new ActorCharacterInfo("Samuel L. Jackson", ImageSource.FromFile("Images/windu.jpg"), "Mace Windu"),
+                new ActorCharacterInfo("Ewan McGregor", ImageSource.FromFile("Images/obi.jpg"), "Obi Wan Kenobi"),
+                new ActorCharacterInfo("Ian McDiarmid", ImageSource.FromFile("Images/palpatine.jpg"), "Palpatine"),
+                new ActorCharacterInfo("Frank Oz", ImageSource.FromFile("Images/yoda.jpg"), "Yoda"),
             };
 
             return actors;

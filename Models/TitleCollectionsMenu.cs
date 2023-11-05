@@ -10,6 +10,6 @@ namespace MyFirstMobileApp.Models
     {
         public static string SWMoviesTitle = "Star Wars Movies";
         public static string MoviesTitle = "Collection View";
-
+        public static string ImagesTitle = "Images";
     }
 }
