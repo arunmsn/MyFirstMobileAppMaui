@@ -8,6 +8,6 @@ namespace MyFirstMobileApp.Models.Entities
 {
     public static class TitleStarWarsMovies
     {
-        public static String SWTitle = "Star Wars Movies";
+        public static String SWTitle = "Collection View";
     }
 }

@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.CollectionsUpdatable.AddEdit.AddCollectionView"
+             Title="{Binding Title}">
+
+    <FlexLayout Padding="5" Direction="Column">
+
+        <Label Text="Movie Title" FontAttributes="Bold" FontSize="Large" TextColor="Black" Margin="5,5,0,10" />
+        
+        <Entry Placeholder="Enter Movie Title" FontAttributes="Bold" FontSize="Large" TextColor="Blue" HorizontalOptions="FillAndExpand"
+                  Text="{Binding MovieName, Mode=TwoWay}" x:Name="MovieTitle" Margin="5,-10" />
+        
+        <Button Text="Save" Command="{Binding SaveBtnClicked}" BackgroundColor="Green" TextColor="White"
+                     FontAttributes="Bold" HorizontalOptions="FillAndExpand" x:Name="saveBtn" Margin="0,10" />
+    </FlexLayout>
+
+</ContentPage>

@@ -30,7 +30,7 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding SWMoviesTitle}"
+                    Text="{Binding MoviesTitle}"
                     Command="{Binding OnMoviesClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
@@ -38,7 +38,8 @@
                     Command="{Binding OnCollectionImageClicked}"/>
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="Button" />
+                    Text="{Binding ButtonsTitle}"
+                    Command="{Binding OnButtonsClicked}"/>
             <Button Grid.Row="1"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
