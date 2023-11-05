@@ -29,12 +29,15 @@
         
         <FlexLayout Direction="Column"
                     AlignItems="Center">
-            
-            <Label Text="Movies"
-                   FontSize="50"
-                   FontAttributes="Bold,Italic"
-                   TextColor="CadetBlue" />
-            
+
+            <Label Text="Movies" 
+                   FontSize="50" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" 
+                   BackgroundColor="Red" 
+                   WidthRequest="500" 
+                   HorizontalTextAlignment="Center" />
+
         </FlexLayout>
 
         <BoxView HeightRequest="2"
@@ -46,7 +49,8 @@
             <CollectionView x:Name="ItemsCollectionsView" 
                             ItemsSource="{Binding SWMoviesCollection,Mode=TwoWay}"
                             SelectionMode="None"
-                            ItemsLayout="VerticalList">
+                            ItemsLayout="VerticalList"
+                            Background="Black">
 
                 <CollectionView.ItemTemplate>
 
@@ -59,9 +63,11 @@
 
                                 <Label Text="{Binding NameOfMovie,Mode=TwoWay}"
                                        FontAttributes="Bold"
-                                       HorizontalTextAlignment="Start"
-                                       TextColor="#000000"
-                                       FontSize="Medium"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="End"
+                                       TextColor="Red"
+                                       BackgroundColor="Black"
+                                       FontSize="16"
                                        FlexLayout.Grow="1" />
 
                                 <StackLayout Orientation="Horizontal"
@@ -70,13 +76,17 @@
                                     <Button Text="Update"
                                             Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference ItemsCollectionView}}"
                                             CommandParameter="{Binding .}"
-                                            TextTransform="None"
+                                            BackgroundColor="Black"
+                                            TextColor="Red"
+                                            TextTransform="3"
                                             HorizontalOptions="End" />
 
                                     <Button Text="Delete"
                                             Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference ItemsCollectionView}}"
                                             CommandParameter="{Binding .}"
-                                            TextTransform="None"
+                                            BackgroundColor="Red"
+                                            TextColor="Black"
+                                            TextTransform="3"
                                             HorizontalOptions="End" />
 
                                 </StackLayout>

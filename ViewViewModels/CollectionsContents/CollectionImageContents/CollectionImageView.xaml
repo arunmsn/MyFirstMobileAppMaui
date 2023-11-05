@@ -6,24 +6,35 @@
              Title="{Binding Title}">
 
     <ContentPage.Resources>
+        
         <ResourceDictionary>
+            
             <Style TargetType="Label">
+                
                 <Setter Property="Margin" Value="5" />
+                
             </Style>
+            
         </ResourceDictionary>
+        
     </ContentPage.Resources>
 
     <CollectionView x:Name="ItemsListView"
                     ItemsSource="{Binding SWCollection}"
                     SelectionMode="None"
-                    ItemsLayout="VerticalList">
+                    ItemsLayout="VerticalList"
+                    Background="Black">
 
         <CollectionView.ItemTemplate>
+            
             <DataTemplate x:DataType="local:ActorCharacterInfo">
+                
                 <StackLayout>
+                    
                     <FlexLayout Direction="Row"
                                 JustifyContent="Start"
                                 AlignItems="Start">
+                        
                         <Image Source="{Binding ActorImage}"
                                Aspect="AspectFill"
                                WidthRequest="250" />
@@ -31,17 +42,23 @@
                         <StackLayout FlexLayout.Grow="1"
                                      Padding="5"
                                      HorizontalOptions="StartAndExpand">
+                            
                             <Label Text="{Binding ActorName}"
                                    FontAttributes="Bold"
-                                   TextColor="CadetBlue"
+                                   TextColor="White"
                                    HorizontalOptions="Start"
+                                   FontSize="15"
                                    WidthRequest="100" />
+                            
                             <Label Text="{Binding CharacterName}"
-                                   FontAttributes="Italic,Bold"
-                                   TextColor="Blue"
+                                   FontAttributes="Italic"
+                                   TextColor="Red"
                                    HorizontalOptions="Start"
+                                   FontSize="20"
                                    WidthRequest="100" />
+                            
                         </StackLayout>
+
                     </FlexLayout>
 
                     <BoxView Color="LightGray"
@@ -49,8 +66,11 @@
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="End"
                              Margin="0,5,0,0" />
+                    
                 </StackLayout>
+                
             </DataTemplate>
+            
         </CollectionView.ItemTemplate>
         
     </CollectionView>

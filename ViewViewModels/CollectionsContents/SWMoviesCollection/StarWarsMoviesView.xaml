@@ -9,13 +9,15 @@
         
         <!-- View Header Label -->
         <StackLayout HorizontalOptions="CenterAndExpand">
+            
             <Label Text="Movies" 
-                   FontSize="50" 
+                   FontSize="75" 
                    FontAttributes="Bold,Italic" 
                    TextColor="Black" 
                    BackgroundColor="Red" 
                    WidthRequest="500" 
                    HorizontalTextAlignment="Center" />
+            
         </StackLayout>
         
         <!-- View Separator Line -->
@@ -25,35 +27,54 @@
         <!-- ViewModel: Binding to the "SWMoviesCollection" in the ViewModel -->
         <CollectionView x:Name="ItemsListView"
                         ItemsSource="{Binding SWMoviesCollection}"
-                        SelectionMode="None">
+                        SelectionMode="None"
+                        Background="Black">
 
             <CollectionView.ItemsLayout>
+                
                 <LinearItemsLayout Orientation="Vertical" />
+                
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
+
                 <DataTemplate x:DataType="local:StarWarsMovies">
-                    <Grid Padding="2">
+
+                    <Grid Padding="2"
+                          Background="Red">
+
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
+
+                            <RowDefinition Height="103" />
+
                         </Grid.RowDefinitions>
-                         
+
                         <!-- View: Display name of the movie -->
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal"
+                                     Background="Black">
+
                             <StackLayout>
+
                                 <!-- ViewModel: Binding of the NameOfMovie property in the ViewModel which is the property defined in the SWMovies model -->
                                 <Label Text="{Binding NameOfMovie}"
                                        FontAttributes="Bold"
                                        HorizontalTextAlignment="Center"
                                        BackgroundColor="Black"
                                        TextColor="Red"
-                                       FontSize="Medium" />
+                                       FontSize="30" />
+
                             </StackLayout>
+
                         </StackLayout>
+
                     </Grid>
+
                 </DataTemplate>
+
             </CollectionView.ItemTemplate>
-            
+
         </CollectionView>
+        
     </StackLayout>
+    
 </ContentPage>
