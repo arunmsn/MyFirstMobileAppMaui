@@ -74,19 +74,19 @@
                                              HorizontalOptions="EndAndExpand">
 
                                     <Button Text="Update"
-                                            Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference ItemsCollectionView}}"
+                                            Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference SWMoviesCollection}}"
                                             CommandParameter="{Binding .}"
                                             BackgroundColor="Black"
                                             TextColor="Red"
-                                            TextTransform="3"
+                                            TextTransform="Uppercase"
                                             HorizontalOptions="End" />
 
                                     <Button Text="Delete"
-                                            Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference ItemsCollectionView}}"
+                                            Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference SWMoviesCollection}}"
                                             CommandParameter="{Binding .}"
                                             BackgroundColor="Red"
                                             TextColor="Black"
-                                            TextTransform="3"
+                                            TextTransform="Uppercase"
                                             HorizontalOptions="End" />
 
                                 </StackLayout>
