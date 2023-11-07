@@ -7,50 +7,28 @@
 
     <!--Applying a "Style" to the buttons. This will provide a space between the buttons-->
     <ContentPage.Resources>
-        
         <Style TargetType="Button">
-            
-            <Setter Property="Margin"
-                    Value="10" />
-            
+            <Setter Property="Margin" Value="10" />
         </Style>
-        
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
-        
-        <ToolbarItem Text="Add"
-                     x:Name="Addbtn"
-                     Command="{Binding AddCommand}" />
-        
+        <ToolbarItem Text="Add" x:Name="Addbtn" Command="{Binding AddCommand}" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        
-        <FlexLayout Direction="Column"
-                    AlignItems="Center">
 
-            <Label Text="Movies" 
-                   FontSize="50" 
-                   FontAttributes="Bold" 
-                   TextColor="Black" 
-                   BackgroundColor="Red" 
-                   WidthRequest="500" 
-                   HorizontalTextAlignment="Center" />
-
+        <FlexLayout Direction="Column" AlignItems="Center">
+            <Label Text="Movies"  FontSize="50"  FontAttributes="Bold"  TextColor="Black" 
+                       BackgroundColor="Red"  WidthRequest="500"  HorizontalTextAlignment="Center" />
         </FlexLayout>
 
-        <BoxView HeightRequest="2"
-                 BackgroundColor="#000000" />
+        <BoxView HeightRequest="2" BackgroundColor="#000000" />
 
-        <RefreshView IsRefreshing="{Binding IsBusy,Mode=TwoWay}" 
-                     Command="{Binding RefreshCommand}">
+        <RefreshView IsRefreshing="{Binding IsBusy,Mode=TwoWay}" Command="{Binding RefreshCommand}">
 
-            <CollectionView x:Name="ItemsCollectionsView" 
-                            ItemsSource="{Binding SWMoviesCollection,Mode=TwoWay}"
-                            SelectionMode="None"
-                            ItemsLayout="VerticalList"
-                            Background="Black">
+            <CollectionView x:Name="ItemsCollectionsView"  ItemsSource="{Binding SWMoviesCollection,Mode=TwoWay}"
+                                    SelectionMode="None" ItemsLayout="VerticalList" Background="Black">
 
                 <CollectionView.ItemTemplate>
 
@@ -61,41 +39,24 @@
                             <!-- FlexLayout with NameOfMovie and buttons -->
                             <FlexLayout AlignItems="Start">
 
-                                <Label Text="{Binding NameOfMovie,Mode=TwoWay}"
-                                       FontAttributes="Bold"
-                                       HorizontalTextAlignment="Center"
-                                       VerticalTextAlignment="End"
-                                       TextColor="Red"
-                                       BackgroundColor="Black"
-                                       FontSize="16"
-                                       FlexLayout.Grow="1" />
+                                <Label Text="{Binding NameOfMovie,Mode=TwoWay}" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="End" TextColor="Red" BackgroundColor="Black" FontSize="16"
+                                           FlexLayout.Grow="1" />
 
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="EndAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Button Text="Update" Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference ItemsCollectionsView}}"
+                                                 CommandParameter="{Binding .}" BackgroundColor="Black" TextColor="Red" TextTransform="Uppercase"
+                                                 HorizontalOptions="End" />
 
-                                    <Button Text="Update"
-                                            Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference SWMoviesCollection}}"
-                                            CommandParameter="{Binding .}"
-                                            BackgroundColor="Black"
-                                            TextColor="Red"
-                                            TextTransform="Uppercase"
-                                            HorizontalOptions="End" />
-
-                                    <Button Text="Delete"
-                                            Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference SWMoviesCollection}}"
-                                            CommandParameter="{Binding .}"
-                                            BackgroundColor="Red"
-                                            TextColor="Black"
-                                            TextTransform="Uppercase"
-                                            HorizontalOptions="End" />
-
+                                    <Button Text="Delete" Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference ItemsCollectionsView}}"
+                                                 CommandParameter="{Binding .}" BackgroundColor="Red" TextColor="Black" TextTransform="Uppercase"
+                                                 HorizontalOptions="End" />
                                 </StackLayout>
 
                             </FlexLayout>
 
                             <!-- Add a BoxView for the separator below each item -->
-                            <BoxView HeightRequest="2"
-                                     BackgroundColor="LightGray" />
+                            <BoxView HeightRequest="2" BackgroundColor="LightGray" />
 
                         </StackLayout>
                         
