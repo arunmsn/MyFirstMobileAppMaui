@@ -11,5 +11,6 @@ namespace MyFirstMobileApp.Models
         public static string MoviesTitle = "Collection View";
         public static string ImagesTitle = "Images";
         public static string ButtonsTitle = "Buttons";
+        public static string IconsTitle = "Icons";
     }
 }

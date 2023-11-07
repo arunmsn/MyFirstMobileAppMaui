@@ -74,6 +74,9 @@
 	  <MauiXaml Update="ViewViewModels\AppImages\URIImagesXAML\URIImagesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\CollectionsContents\CollectionIconsContents\CollectionsIconsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\CollectionsContents\CollectionImageContents\CollectionImageView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
