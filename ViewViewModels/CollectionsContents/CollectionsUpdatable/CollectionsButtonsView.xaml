@@ -41,7 +41,7 @@
 
                                 <Label Text="{Binding NameOfMovie,Mode=TwoWay}" FontAttributes="Bold" HorizontalTextAlignment="Center"
                                            VerticalTextAlignment="End" TextColor="Red" BackgroundColor="Black" FontSize="16"
-                                           FlexLayout.Grow="1" />
+                                           FlexLayout.Grow="1" HeightRequest="40" FontFamily="Roboto"/>
 
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
                                     <Button Text="Update" Command="{Binding Path=BindingContext.UpdateCommand,Source={x:Reference ItemsCollectionsView}}"

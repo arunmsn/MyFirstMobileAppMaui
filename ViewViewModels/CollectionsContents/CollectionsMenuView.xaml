@@ -12,39 +12,37 @@
         </Style>
     </ContentPage.Resources>
 
-    <VerticalStackLayout>
-        <!-- Sets Margin Left, Top, Right, Bottom -->
-        <Grid Margin="25, 35, 20, 20">
-            <Grid.RowDefinitions>
-                <!-- Set Height to 50 DIPs (device-independent pixels) -->
-                <RowDefinition Height="75" />
-                <RowDefinition Height="75" />
-                <RowDefinition Height="75" />
-            </Grid.RowDefinitions>
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-            <Grid.ColumnDefinitions>
-                <!-- Set Column to * which will proportionately space out the columns -->
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Row="0"
-                    Grid.Column="0"
-                    Text="{Binding MoviesTitle}"
+            <Button Text="{Binding MoviesTitle}"
+                    TextColor="Red"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    BackgroundColor="White"
+                    FontSize="40"
                     Command="{Binding OnMoviesClicked}" />
-            <Button Grid.Row="0"
-                    Grid.Column="1"
-                    Text="{Binding ImagesTitle}"
-                    Command="{Binding OnCollectionImageClicked}"/>
-            <Button Grid.Row="1"
-                    Grid.Column="0"
-                    Text="{Binding ButtonsTitle}"
-                    Command="{Binding OnButtonsClicked}"/>
-            <Button Grid.Row="1"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2"
-                    Text="Button 1,1" />
-        </Grid>
+            <Button Text="{Binding ImagesTitle}"
+                    TextColor="Red"
+                    BorderColor="Red"
+                    BorderWidth="2"
+                    BackgroundColor="Black"
+                    FontSize="40"
+                    Command="{Binding OnCollectionImageClicked}" />
+            <Button Text="{Binding ButtonsTitle}"
+                    TextColor="Red"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    BackgroundColor="White"
+                    FontSize="40"
+                    Command="{Binding OnButtonsClicked}" />
+            <Button Text="{Binding IconsTitle}"
+                    TextColor="Red"
+                    BorderColor="Red"
+                    BorderWidth="2"
+                    BackgroundColor="Black"
+                    FontSize="40"
+                    Command="{Binding OnIconsClicked}" />
+                
     </VerticalStackLayout>
 
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewViewModels.Base;
+using MyFirstMobileApp.ViewViewModels.CollectionsContents.CollectionIconsContents;
 using MyFirstMobileApp.ViewViewModels.CollectionsContents.CollectionImageContents;
 using MyFirstMobileApp.ViewViewModels.CollectionsContents.CollectionsUpdatable;
 using MyFirstMobileApp.ViewViewModels.CollectionsContents.SWMoviesCollection;
