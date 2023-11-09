@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyFirstMobileApp.ViewViewModels.Main.MainView"
+             x:Class="MyFirstMobileApp.ViewViewModels.ControlsCollection.ControlsView"
              Title="{Binding Title}">
-    
+
     <!-- Applying a "Style" to the buttons.
          This will provide a space between the buttons. -->
     <ContentPage.Resources>
@@ -20,6 +20,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -30,25 +31,31 @@
 
             <Button Grid.Row="0"
                     Grid.Column="0"
-                    Text="{Binding StackLayoutTitle}"
-                    Command="{Binding OnLayoutsClicked}" />
+                    Text="{Binding SliderTitle}"
+                    Command="{Binding OnSliderClicked}" />
             <Button Grid.Row="0"
                     Grid.Column="1"
-                    Text="{Binding ImagesTitle}"
-                    Command="{Binding OnImagesClicked}" />
+                    Text="{Binding StepperTitle}"
+                    Command="{Binding OnStepperClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
-                    Text="{Binding CollectionsTitle}"
-                    Command="{Binding OnCollectionsClicked}"/>
+                    Text="{Binding SwitchTitle}"
+                    Command="{Binding OnSwitchClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="1"
-                    Text="{Binding ControlsTitle}"
-                    Command="{Binding OnControlsClicked}" />
+                    Text="{Binding EntryTitle}"
+                    Command="{Binding OnEntryClicked}" />
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding PickerTitle}"
+                    Command="{Binding OnPickerClicked}" />
+            <Button Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding DateTimeTitle}"
+                    Command="{Binding OnDateTimeClicked}" />
         </Grid>
     </VerticalStackLayout>
 
 </ContentPage>
-
-    
-    
-    

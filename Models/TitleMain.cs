@@ -12,5 +12,6 @@ namespace MyFirstMobileApp.Models
         public static String StackLayoutTitle { get; } = "Stack Layout";
         public static String ImagesTitle { get; } = "Images";
         public static String CollectionsTitle { get; } = "Collections";
+        public static String ControlsTitle { get; } = "Controls";
     }
 }
