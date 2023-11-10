@@ -19,6 +19,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -30,18 +31,23 @@
             <Button Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
+                    BackgroundColor="BlueViolet"
                     Text="{Binding URIImagesTitle}"
                     Command="{Binding OnURIImagesClicked}" />
             <Button Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
+                    BackgroundColor="BlanchedAlmond"
+                    TextColor="Black"
                     Text="{Binding EmbeddedTitle}"
-                    Command="{Binding OnEmbeddedImagesClicked}"/>
+                    Command="{Binding OnEmbeddedImagesClicked}" />
             <Button Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
+                    BackgroundColor="Red"
+                    TextColor="Blue"
                     Text="{Binding ActivityTitle}"
-                    Command="{Binding OnActivityIndicatorClicked}"/>
+                    Command="{Binding OnActivityIndicatorClicked}" />
         </Grid>
         
     </VerticalStackLayout>
