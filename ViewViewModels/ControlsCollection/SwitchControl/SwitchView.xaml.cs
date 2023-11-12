@@ -14,24 +14,26 @@ public partial class SwitchView : ContentPage
 		{
 			//Red Color
 			label1.TextColor = Color.FromRgb(255, 0, 0);
-		}
+            label2.TextColor = Color.FromRgb(255, 0, 0);
+        }
 		else
 		{
             //Blue Color
             label1.TextColor = Color.FromRgb(0, 0, 255);
-		}
+            label2.TextColor = Color.FromRgb(0, 0, 255);
+        }
 	}
 
     private void SwitchToggledSecond(object sender, ToggledEventArgs e1)
     {
         if (e1.Value == false)
         {
-            //Green Color
+            label1.TextColor = Color.FromRgb(255, 0, 255);
             label2.TextColor = Color.FromRgb(255, 0, 255);
         }
         else
         {
-            //Magenta Color
+            label1.TextColor = Color.FromRgb(0, 255, 182);
             label2.TextColor = Color.FromRgb(0, 255, 182);
         }
     }
