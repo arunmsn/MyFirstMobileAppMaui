@@ -13,5 +13,6 @@ public partial class StepperView : ContentPage
 		double value = e.NewValue;
 		RotatingLabel.Rotation = value;
 		DisplayLabel.Text = string.Format("The Stepper value is {0}", value);
+		//DisplayLabel.TextColor = Color.FromRgb(50, 60, 70); 
 	}
 }
