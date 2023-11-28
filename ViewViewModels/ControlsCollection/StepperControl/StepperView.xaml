@@ -15,17 +15,24 @@
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
 
+        <Image x:Name="RotatingImage"
+               Source="Images/dhil.png"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand"
+               Scale=".8" />
+
         <Stepper x:Name="stepper"
                  Maximum="360"
                  Increment="10"
-                 BackgroundColor="Red"
+                 BackgroundColor="Black"
                  HorizontalOptions="Center"
                  ValueChanged="OnStepperValueChanged" />
+
 
         <Label x:Name="DisplayLabel"
                FontSize="Large"
                FontAttributes="Bold"
-               TextColor="Red"
+               TextColor="Crimson"
                Text="{Binding Source={x:Reference stepper}, Path=Value, StringFormat='The Stepper value is {0:F0}'}"
                HorizontalOptions="Center" />
 

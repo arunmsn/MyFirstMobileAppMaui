@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.CollectionsContents.SWMoviesCollection.CollectionsMenuView"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundColor="Black">
 
     <!-- Applying a "Style" to the buttons.
      This will provide a space between the buttons. -->
@@ -12,13 +13,13 @@
         </Style>
     </ContentPage.Resources>
 
-    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" >
 
             <Button Text="{Binding MoviesTitle}"
                     TextColor="Red"
-                    BorderColor="Black"
+                    BorderColor="Red"
                     BorderWidth="2"
-                    BackgroundColor="White"
+                    BackgroundColor="Black"
                     FontSize="40"
                     Command="{Binding OnMoviesClicked}" />
             <Button Text="{Binding ImagesTitle}"
@@ -30,9 +31,9 @@
                     Command="{Binding OnCollectionImageClicked}" />
             <Button Text="{Binding ButtonsTitle}"
                     TextColor="Red"
-                    BorderColor="Black"
+                    BorderColor="Red"
                     BorderWidth="2"
-                    BackgroundColor="White"
+                    BackgroundColor="Black"
                     FontSize="40"
                     Command="{Binding OnButtonsClicked}" />
             <Button Text="{Binding IconsTitle}"

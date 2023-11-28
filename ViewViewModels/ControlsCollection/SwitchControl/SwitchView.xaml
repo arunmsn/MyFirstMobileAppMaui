@@ -18,7 +18,7 @@
                FontAttributes="Bold" />
 
         <Switch x:Name="switch1"
-                IsToggled="True"
+                IsToggled="{Binding Label1}"
                 Toggled="SwitchToggledFirst"
                 ThumbColor="Blue"
                 OnColor="White" />
@@ -30,7 +30,7 @@
                FontAttributes="Bold" />
 
         <Switch x:Name="switch2"
-                IsToggled="False"
+                IsToggled="{Binding Label2}"
                 Toggled="SwitchToggledSecond"
                 ThumbColor="#FF00EC"
                 OnColor="White" />
