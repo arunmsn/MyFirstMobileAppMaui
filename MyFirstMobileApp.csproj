@@ -92,6 +92,9 @@
 	  <MauiXaml Update="ViewViewModels\ControlsCollection\ControlsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\ControlsCollection\EntryControl\EntryView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\ControlsCollection\SliderControl\SliderView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
