@@ -10,5 +10,7 @@ namespace MyFirstMobileApp.Models
     {
         public static string PickerXAMLTitle { get; set; } = "Picker XAML";
         public static string PickerResultsTitle { get; set; } = "Picker Result";
+        public static string PickerVMTitle { get; set; } = "Picker VM";
+        public static string PickerTitle { get; set; } = "Picker";
     }
 }
