@@ -1,4 +1,5 @@
 using MyFirstMobileApp.Models;
+using MyFirstMobileApp.ViewViewModels.ControlsCollection.EntryControl.Entry;
 
 namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.EntryControl;
 

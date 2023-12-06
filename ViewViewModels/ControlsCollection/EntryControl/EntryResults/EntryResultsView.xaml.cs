@@ -1,3 +1,5 @@
+using MyFirstMobileApp.ViewViewModels.ControlsCollection.EntryControl.EntryResults;
+
 namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.EntryControl;
 
 public partial class EntryResultsView : ContentPage

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.PickerView"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand">
+
+        <Label Text="Click Below"
+               FontSize="Large"
+               FontAttributes="Bold,Italic"
+               Margin="20"
+               MinimumHeightRequest="130"
+               HorizontalOptions="Center" />
+
+        <BoxView HeightRequest="3"
+                 BackgroundColor="Black"
+                 WidthRequest="375" />
+
+        <StackLayout>
+
+            <Picker x:Name="pickerXAML"
+                    Title="Select a Star Wars Character"
+                    FontSize="Large"
+                    TitleColor="DarkRed"
+                    SelectedItem="{Binding SelectedItem}">
+
+                <Picker.ItemsSource>
+
+                    <x:Array Type="{x:Type x:String}">
+
+                        <x:String>Binks</x:String>
+                        <x:String>Chewie</x:String>
+                        <x:String>Darth Vader</x:String>
+                        <x:String>General Grievous</x:String>
+                        <x:String>Han Solo</x:String>
+                        <x:String>Leia</x:String>
+                        <x:String>Mace Windu</x:String>
+                        <x:String>Obi Wan Kenobi</x:String>
+                        <x:String>Palpatine</x:String>
+                        <x:String>Yoda</x:String>
+
+                    </x:Array>
+
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <BoxView HeightRequest="3"
+                     BackgroundColor="Black"
+                     WidthRequest="375" />
+
+            <ImageButton x:Name="Buttons"
+                         BackgroundColor="Transparent"
+                         Source="Images/submit.png"
+                         Command="{Binding OnSubmitClicked}"
+                         Margin="10" />
+
+        </StackLayout>
+
+    </StackLayout>
+    
+</ContentPage>
