@@ -10,5 +10,7 @@ namespace MyFirstMobileApp.Models
     {
         public static string EntryTitle { get; set; } = "Entry";
         public static string EntryXAMLTitle { get; set; } = "Entry XAML";
+        public static string EntryVMTitle { get; set; } = "Entry VM";
+        public static string EntryResultTitle { get; set; } = "Entry Result";
     }
 }
