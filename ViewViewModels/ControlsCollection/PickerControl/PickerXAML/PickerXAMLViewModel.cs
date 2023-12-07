@@ -44,17 +44,18 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
 
         private async void OnSubmitClickedAsync(Object obj)
         {
-            if (String.IsNullOrEmpty(_selectedItem)) 
-            {
-                await Application.Current.MainPage.DisplayAlert(TitlesPicker.PickerXAMLTitle, "A selection must be made!", "OK");
-                return;
-            }
 
             List<ActorCharacterInfo> chars = ActorCharacterInfo.GetSampleCharacterData();
 
             var result = chars.FirstOrDefault(x => x.CharacterName.Equals(_selectedItem));
 
-            await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(result.CharacterName, result.ActorName));
+            await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(result.ActorName, result.ActorImage));
+
+            if (String.IsNullOrEmpty(_selectedItem))
+            {
+                await Application.Current.MainPage.DisplayAlert(TitlesPicker.PickerXAMLTitle, "A selection must be made!", "OK");
+                return;
+            }
         }
     }
 }

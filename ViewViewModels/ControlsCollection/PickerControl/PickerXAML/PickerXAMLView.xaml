@@ -26,7 +26,7 @@
                     FontSize="Large">
 
                 <Picker.ItemsSource>
-
+                    
                     <x:Array Type="{x:Type x:String}">
                         
                         <x:String>Binks</x:String>

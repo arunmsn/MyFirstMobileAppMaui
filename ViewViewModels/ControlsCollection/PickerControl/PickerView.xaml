@@ -6,15 +6,20 @@
 
     <VerticalStackLayout>
 
-        <ImageButton Grid.Row="0"
-                     Grid.Column="0"
-                     Source="Images/xaml.png"
+
+        <ImageButton Source="Images/xaml.png"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Center"
                      Command="{Binding OnXAMLClicked}" />
-        <ImageButton Grid.Row="1"
-                     Grid.Column="0"
-                     Source="Images/vm.png"
-                     Command="{Binding OnVMClicked}" />
+                
+        <BoxView MinimumWidthRequest="30"
+                 BackgroundColor="Black"/>
             
+        <ImageButton Source="Images/vm.png"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Center"
+                     Command="{Binding OnVMClicked}" />
+    
     </VerticalStackLayout>
 
 
