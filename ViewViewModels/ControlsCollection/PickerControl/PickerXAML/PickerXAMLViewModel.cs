@@ -16,7 +16,7 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
         public ImageSource SubmitButton { get; set; } = "Images/submit.png";
         public ICommand OnSubmitClicked { get; }
 
-        private string _selectedItem = string.Empty;
+        private string _selectedCharacter = string.Empty;
 
         public PickerXAMLViewModel()
         {
@@ -25,18 +25,18 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
             OnSubmitClicked = new Command(OnSubmitClickedAsync);
         }
 
-        public string SelectedItem
+        public string SelectedCharacter
         {
             get
             {
-                return _selectedItem;
+                return _selectedCharacter;
             }
 
             set
             {
-                if (_selectedItem != value) 
+                if (_selectedCharacter != value) 
                 {
-                    SetProperty(ref _selectedItem, value);
+                    SetProperty(ref _selectedCharacter, value);
                 }
 
             }
@@ -47,11 +47,11 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
 
             List<ActorCharacterInfo> chars = ActorCharacterInfo.GetSampleCharacterData();
 
-            var result = chars.FirstOrDefault(x => x.CharacterName.Equals(_selectedItem));
+            var result = chars.FirstOrDefault(x => x.CharacterName.Equals(_selectedCharacter));
 
             await Application.Current.MainPage.Navigation.PushAsync(new PickerResultsView(result.ActorName, result.ActorImage));
 
-            if (String.IsNullOrEmpty(_selectedItem))
+            if (String.IsNullOrEmpty(_selectedCharacter))
             {
                 await Application.Current.MainPage.DisplayAlert(TitlesPicker.PickerXAMLTitle, "A selection must be made!", "OK");
                 return;
