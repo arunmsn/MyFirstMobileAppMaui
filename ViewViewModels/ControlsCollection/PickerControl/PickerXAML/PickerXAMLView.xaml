@@ -23,22 +23,23 @@
                     Title="Select a Character"
                     TitleColor="DarkRed"
                     SelectedItem="{Binding SelectedCharacter}"
+                    HorizontalOptions="CenterAndExpand"
                     FontSize="Large">
 
                 <Picker.ItemsSource>
                     
                     <x:Array Type="{x:Type x:String}">
-                        
+
                         <x:String>Binks</x:String>
                         <x:String>Chewie</x:String>
                         <x:String>Darth Vader</x:String>
-                        <x:String>General Grievous</x:String>
+                        <x:String>Grievous</x:String>
                         <x:String>Han Solo</x:String>
                         <x:String>Leia</x:String>
                         <x:String>Luke</x:String>
                         <x:String>Obi Wan Kenobi</x:String>
                         <x:String>Palpatine</x:String>
-                        <x:String>Windu</x:String>
+                        <x:String>Mace Windu</x:String>
                         <x:String>Yoda</x:String>
                         
                     </x:Array>

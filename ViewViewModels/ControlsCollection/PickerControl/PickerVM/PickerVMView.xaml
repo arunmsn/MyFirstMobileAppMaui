@@ -18,7 +18,7 @@
                  BackgroundColor="Black"
                  WidthRequest="375" />
 
-        <StackLayout HorizontalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="Center">
 
             <Picker x:Name="pickerVM"
                     Title="Select a Character"
@@ -27,6 +27,7 @@
                     FontSize="Large"
                     FontAttributes="Bold,Italic"
                     VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center"
                     WidthRequest="300"
                     ItemsSource="{Binding CharacterList}" />
 

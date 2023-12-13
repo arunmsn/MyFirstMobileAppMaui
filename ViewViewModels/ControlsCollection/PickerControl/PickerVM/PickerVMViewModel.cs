@@ -2,11 +2,6 @@
 using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.ViewViewModels.Base;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.PickerResults;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.PickerVM
@@ -18,7 +13,7 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
         //Property to bind the Picker Item Source
         public List<string> CharacterList { get; set; }
         List<ActorCharacterInfo> _characters;
-        string _selectedItem = string.Empty;
+        string _selectedCharacter = string.Empty;
 
         public ICommand OnSubmitClicked { get; }
 
@@ -43,17 +38,17 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
             _characters = allCharacterInfo;
         }
 
-        private string SelectedCharacter
+        public string SelectedCharacter
         {
             get
             {
-                return _selectedItem;
+                return _selectedCharacter;
             }
             set
             {
-                if (_selectedItem != value)
+                if (_selectedCharacter != value)
                 {
-                    SetProperty(ref _selectedItem, value);
+                    SetProperty(ref _selectedCharacter, value);
                 }
             }
         }
@@ -61,14 +56,14 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.Picke
         private async void OnSubmitClickedAsync(object obj)
         {
             //Verify user made a selection
-            if (string.IsNullOrEmpty(_selectedItem))
+            if (string.IsNullOrEmpty(_selectedCharacter))
             {
                 await Application.Current.MainPage.DisplayAlert(TitlesPicker.PickerVMTitle, "A selection must be made!", "OK");
                 return;
             }
 
             //Get selection
-            var selectedCharacterName = _selectedItem;
+            var selectedCharacterName = _selectedCharacter;
 
             //Find the ActorCharacterInfo based on the selected character name
             var selectedCharacterInfo = _characters.FirstOrDefault(info => info.CharacterName == selectedCharacterName);
