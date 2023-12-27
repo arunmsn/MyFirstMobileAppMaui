@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewViewModels.Base;
+using MyFirstMobileApp.ViewViewModels.ControlsCollection.DatePickerControl;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection.EntryControl;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection.SliderControl;
@@ -23,6 +24,8 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection
         public ICommand OnSwitchClicked { get; set; }
         public ICommand OnEntryClicked { get; set; }
         public ICommand OnPickerClicked { get; set; }
+        public ICommand OnDateTimeClicked { get; set; }
+
 
 
         public ControlsViewModel()
@@ -34,6 +37,7 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection
             OnSwitchClicked = new Command(OnSwitchClickedAsync);
             OnEntryClicked = new Command(OnEntryClickedAsync);
             OnPickerClicked = new Command(OnPickerClickedAsync);
+            OnDateTimeClicked = new Command(OnDateTimeClickedAsync);
 
         }
 
@@ -57,6 +61,10 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection
         private async void OnPickerClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new PickerView());
+        }
+        private async void OnDateTimeClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerView());
         }
     }
 }
