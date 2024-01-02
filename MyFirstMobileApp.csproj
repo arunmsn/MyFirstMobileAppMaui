@@ -95,6 +95,9 @@
 	  <MauiXaml Update="ViewViewModels\ControlsCollection\DatePickerControl\DatePickerView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\ControlsCollection\DatePickerControl\DatePickerVM\DatePickerVMView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\ControlsCollection\DatePickerControl\DatePickerXAML\DatePickerXAMLView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -146,10 +149,6 @@
 	  <MauiXaml Update="ViewViewModels\Layouts\StackLayoutContents\StackLayoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="ViewViewModels\ControlsCollection\DatePickerControl\DatePickerVM\" />
 	</ItemGroup>
 
 </Project>

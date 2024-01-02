@@ -1,5 +1,6 @@
 ﻿using MyFirstMobileApp.Models;
 using MyFirstMobileApp.ViewViewModels.Base;
+using MyFirstMobileApp.ViewViewModels.ControlsCollection.DatePickerControl.DatePickerVM;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection.DatePickerControl.DatePickerXAML;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace MyFirstMobileApp.ViewViewModels.ControlsCollection.DatePickerControl
         }
         private async void OnVMClickedAsync()
         {
-            //await Application.Current.MainPage.Navigation.PushAsync(new DatePickerVMView());
+            await Application.Current.MainPage.Navigation.PushAsync(new DatePickerVMView());
         }
     }
 }
