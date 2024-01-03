@@ -35,29 +35,35 @@
                     TextColor="Black"
                     Text="{Binding SliderTitle}"
                     Command="{Binding OnSliderClicked}" />
+            
             <Button Grid.Row="0"
                     Grid.Column="1"
                     BackgroundColor="Orange"
                     TextColor="Black"
                     Text="{Binding StepperTitle}"
                     Command="{Binding OnStepperClicked}" />
+
             <Button Grid.Row="1"
                     Grid.Column="0"
                     BackgroundColor="Yellow"
                     TextColor="Black"
                     Text="{Binding SwitchTitle}"
                     Command="{Binding OnSwitchClicked}" />
+            
             <Button Grid.Row="1"
                     Grid.Column="1"
                     BackgroundColor="Green"
+                    TextColor="Black"
                     Text="{Binding EntryTitle}"
                     Command="{Binding OnEntryClicked}" />
+            
             <Button Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
                     BackgroundColor="Blue"
                     Text="{Binding PickerTitle}"
                     Command="{Binding OnPickerClicked}" />
+            
             <Button Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"

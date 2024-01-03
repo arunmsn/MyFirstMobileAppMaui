@@ -2,25 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyFirstMobileApp.ViewViewModels.ControlsCollection.PickerControl.PickerView"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Background="Black">
 
-    <VerticalStackLayout>
+    <StackLayout>
 
 
-        <ImageButton Source="Images/xaml.png"
-                     VerticalOptions="CenterAndExpand"
+        <ImageButton Source="Images/datepickerxaml.png"
+                     VerticalOptions="StartAndExpand"
                      HorizontalOptions="Center"
                      Command="{Binding OnXAMLClicked}" />
                 
         <BoxView MinimumWidthRequest="30"
-                 BackgroundColor="Black"/>
-            
-        <ImageButton Source="Images/vm.png"
+                 BackgroundColor="Black" />
+
+        <Label Text="Welcome to Date Picker!" 
+               FontSize="60" 
+               HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="CenterAndExpand" 
+               TextColor="WhiteSmoke" 
+               FontFamily="OpenSans-Semibold" 
+               Margin="22"/>
+
+        <ImageButton Source="Images/datepickervm.png"
                      VerticalOptions="CenterAndExpand"
-                     HorizontalOptions="Center"
+                     HorizontalOptions="End"
                      Command="{Binding OnVMClicked}" />
     
-    </VerticalStackLayout>
+    </StackLayout>
 
 
 </ContentPage>
