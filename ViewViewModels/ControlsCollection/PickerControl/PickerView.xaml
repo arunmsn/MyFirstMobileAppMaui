@@ -8,7 +8,7 @@
     <StackLayout>
 
 
-        <ImageButton Source="Images/datepickerxaml.png"
+        <ImageButton Source="Images/pickerxaml.png"
                      VerticalOptions="StartAndExpand"
                      HorizontalOptions="Center"
                      Command="{Binding OnXAMLClicked}" />
@@ -16,7 +16,7 @@
         <BoxView MinimumWidthRequest="30"
                  BackgroundColor="Black" />
 
-        <Label Text="Welcome to Picker!" 
+        <Label Text="Welcome to the Picker!" 
                FontSize="60" 
                HorizontalOptions="CenterAndExpand" 
                VerticalOptions="CenterAndExpand" 
@@ -24,7 +24,7 @@
                FontFamily="OpenSans-Semibold" 
                Margin="22"/>
 
-        <ImageButton Source="Images/datepickervm.png"
+        <ImageButton Source="Images/pickervm.png"
                      VerticalOptions="CenterAndExpand"
                      HorizontalOptions="End"
                      Command="{Binding OnVMClicked}" />
