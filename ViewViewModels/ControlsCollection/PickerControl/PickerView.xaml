@@ -16,7 +16,7 @@
         <BoxView MinimumWidthRequest="30"
                  BackgroundColor="Black" />
 
-        <Label Text="Welcome to Date Picker!" 
+        <Label Text="Welcome to Picker!" 
                FontSize="60" 
                HorizontalOptions="CenterAndExpand" 
                VerticalOptions="CenterAndExpand" 
