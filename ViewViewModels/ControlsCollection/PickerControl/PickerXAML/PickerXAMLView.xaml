@@ -19,7 +19,7 @@
 
         <StackLayout HorizontalOptions="CenterAndExpand">
 
-            <Picker x:Name="pickerVM"
+            <Picker x:Name="pickerXAML"
                     Title="Select a Character"
                     TitleColor="DarkRed"
                     SelectedItem="{Binding SelectedCharacter}"
