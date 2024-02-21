@@ -59,9 +59,16 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="ViewViewModels\Movies\MoviesMgmtView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ViewViewModels\Movies\MoviesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\AppImages\Activity\ActivityIndicatorView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
