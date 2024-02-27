@@ -16,16 +16,16 @@
             <Label Text="Enter Destination" FontSize="25" FontAttributes="Bold,Italic" TextColor="CadetBlue" />
         </StackLayout>
 
-        <Entry Placeholder="Enter Country"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
-                  Text="{Binding Country}" TextColor="Blue" x:Name="CountryTitle" />
+        <Entry Placeholder="Enter Name"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Name}" TextColor="Blue" x:Name="NameTitle" />
 
-        <Entry Placeholder="Enter City"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
-                  Text="{Binding City}" TextColor="Blue" x:Name="CityTitle" />
+        <Entry Placeholder="Enter Trilogy"  FontSize="Medium"  HorizontalOptions="FillAndExpand"
+                  Text="{Binding Trilogy}" TextColor="Blue" x:Name="TrilogyTitle" />
 
         <StackLayout HorizontalOptions="Center">
-            <Label Text="Visited?"  x:Name="label" FontSize="Medium"  TextColor="Blue" FontAttributes="Bold" />
+            <Label Text="Watched?"  x:Name="label" FontSize="Medium"  TextColor="Blue" FontAttributes="Bold" />
 
-            <Switch x:Name="IsVisited" IsToggled="{Binding Visited, Mode=TwoWay}" ThumbColor="Blue" OnColor="Green" />
+            <Switch x:Name="IsWatched" IsToggled="{Binding Watched, Mode=TwoWay}" ThumbColor="Blue" OnColor="Green" />
         </StackLayout>
 
         <StackLayout HorizontalOptions="FillAndExpand">

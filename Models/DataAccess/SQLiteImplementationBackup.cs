@@ -29,24 +29,24 @@ namespace MyFirstMobileApp.Models.DataAccess
                 // Initialize SQLite connection
                 con = new SQLiteAsyncConnection(path);
 
-                // Create 'Vacation' table if it does not exist
+                // Create 'Movies' table if it does not exist
                 con.CreateTableAsync<Movies>();
             }
         }
 
-        // Method to retrieve all vacations from the 'Vacation' table
+        // Method to retrieve all Moviess from the 'Movies' table
         public async Task<List<Movies>> GetMovies()
         {
             // Use the returned connection from InitializeDatabase
             //SQLiteAsyncConnection connection = GetConnectionWithCreateDatabase();
             await InitializeDatabase();
 
-            // SQL query to select all rows from 'Vacation' table
+            // SQL query to select all rows from 'Movies' table
             string sql = "SELECT * FROM Movies";
 
-            // Execute the query and retrieve a list of vacations
-            //List<Vacation> vacations = con.QueryAsync<Vacation>(sql);
-            //List<Vacation> vacations = await con.Table<Vacation>().ToListAsync();
+            // Execute the query and retrieve a list of Moviess
+            //List<Movies> Moviess = con.QueryAsync<Movies>(sql);
+            //List<Movies> Moviess = await con.Table<Movies>().ToListAsync();
             List<Movies> movies = await con.QueryAsync<Movies>(sql);
 
             //return await Database.Table<TodoItem>().Where(t => t.Done).ToListAsync();
@@ -57,8 +57,8 @@ namespace MyFirstMobileApp.Models.DataAccess
             return movies;
         }
 
-        // Method to save a new vacation record
-        // Method to save a new vacation record
+        // Method to save a new Movies record
+        // Method to save a new Movies record
         public async Task<bool> SaveMovies(Movies movies)
         {
             bool res = false;
@@ -67,20 +67,20 @@ namespace MyFirstMobileApp.Models.DataAccess
             {
                 await InitializeDatabase();
 
-                // Check if a record with the same Country and City already exists
+                // Check if a record with the same Name and Trilogy already exists
                 var existingMovie = await con.Table<Movies>()
                     .Where(v => v.Name == movies.Name && v.Trilogy == movies.Trilogy)
                     .FirstOrDefaultAsync();
 
                 if (existingMovie == null)
                 {
-                    // Insert the vacation record into the 'Vacation' table
+                    // Insert the Movies record into the 'Movies' table
                     await con.InsertAsync(movies);
                     res = true;
                 }
                 else
                 {
-                    // Record with the same Country and City already exists
+                    // Record with the same Name and Trilogy already exists
                     // You can handle this situation as per your requirements
                     string msg = movies.Name + " and " + movies.Trilogy + " already exists.";
                     await Application.Current.MainPage.DisplayAlert("Message", msg, "Ok");
@@ -95,7 +95,7 @@ namespace MyFirstMobileApp.Models.DataAccess
             return res;
         }
 
-        // Method to update an existing vacation record
+        // Method to update an existing Movies record
         public async Task<bool> UpdateMovies(Movies movies)
         {
             bool res = false;
@@ -107,7 +107,7 @@ namespace MyFirstMobileApp.Models.DataAccess
 
                 await InitializeDatabase();
 
-                // SQL query to update vacation details based on the provided Id
+                // SQL query to update Movies details based on the provided Id
                 string sql = $"UPDATE Movies " +
                              $"SET Name = '{movies.Name}', " +
                              $"Trilogy = '{movies.Trilogy}', " +
@@ -127,7 +127,7 @@ namespace MyFirstMobileApp.Models.DataAccess
             return res;
         }
 
-        // Method to delete a vacation record based on the provided Id
+        // Method to delete a Movies record based on the provided Id
         public async Task<bool> DeleteMovies(int Id)
         {
             bool res = false;
@@ -138,7 +138,7 @@ namespace MyFirstMobileApp.Models.DataAccess
                 //SQLiteConnection connection = GetConnectionWithCreateDatabase();
                 await InitializeDatabase();
 
-                // SQL query to delete a vacation record from the 'Vacation' table
+                // SQL query to delete a Movies record from the 'Movies' table
                 string sql = $"DELETE FROM Movies WHERE Id = {Id}";
 
                 // Execute the delete query

@@ -4,17 +4,17 @@ using MyFirstMobileApp.Models.Titles;
 using MyFirstMobileApp.ViewViewModels.Base;
 using System.Collections.ObjectModel;
 
-namespace MyFirstMobileApp.ViewViewModels.Vacations
+namespace MyFirstMobileApp.ViewViewModels.Moviess
 {
-    //ViewModel for managing Vacation data
+    //ViewModel for managing Movies data
     public class MoviesViewModel : BaseViewModel
     {
         private readonly SQLiteImplementation _sqliteService = new SQLiteImplementation();
 
-        //Collection to hold vacation data for the UI
+        //Collection to hold Movies data for the UI
         private ObservableCollection<Movies> _moviesCollection;
 
-        //Property to expose the vacation collection to the UI
+        //Property to expose the Movies collection to the UI
         public ObservableCollection<Movies> MoviesCollection
         {
             get { return _moviesCollection; }
@@ -22,7 +22,7 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
             {
                 _moviesCollection = value;
                 OnPropertyChanged();
-                //Debug.WriteLine($"VacationCollection Count: {_vacationCollection?.Count}");
+                //Debug.WriteLine($"MoviesCollection Count: {_MoviesCollection?.Count}");
             }
         }
 
@@ -31,10 +31,10 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
         {
             Title = TitleMovies.TitleMovie;
 
-            //Initialize the vacation collection
+            //Initialize the Movies collection
             MoviesCollection = new ObservableCollection<Movies>();
 
-            //Trigger an asynchronous refresh of the vacation list data
+            //Trigger an asynchronous refresh of the Movies list data
             Task.Run(async () => await RefreshMoviesListData());
 
             _ = RefreshMoviesListData();
@@ -42,14 +42,14 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
 
         public async Task RefreshMoviesListData()
         {
-            // Retrieve vacation data from the SQLite database
-            var vacation = await _sqliteService.GetMovie();
+            // Retrieve Movies data from the SQLite database
+            var Movies = await _sqliteService.GetMovie();
 
-            // Update the ViewModel's vacation collection with the new data
-            MoviesCollection = new ObservableCollection<Movies>(vacation);
+            // Update the ViewModel's Movies collection with the new data
+            MoviesCollection = new ObservableCollection<Movies>(Movies);
         }
 
-        //Command to navigate to the VacationMgmtView and handle Adds
+        //Command to navigate to the MoviesMgmtView and handle Adds
         public Command AddCommand
         {
             get
@@ -57,60 +57,60 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
                 return new Command<Movies>((Movies movies) =>
                 {
                     //Unsubscribe from events - precautionary step to ensure that there are no existing subscriptions for the specified events
-                    MessagingCenter.Unsubscribe<Vacation>(this, "AddVacation");
+                    MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
 
-                    //Navigate to the VacationAddView, passing a vacation if available
-                    Application.Current.MainPage.Navigation.PushAsync(new VacationMgmtView(vacation));
+                    //Navigate to the MoviesAddView, passing a Movies if available
+                    Application.Current.MainPage.Navigation.PushAsync(new MoviesMgmtView(Movies));
 
-                    //Subscribe to a MessagingCenter event for refreshing data when a new vacation is added
-                    MessagingCenter.Subscribe<Vacation>(this, "AddVacation", async (data) =>
+                    //Subscribe to a MessagingCenter event for refreshing data when a new Movies is added
+                    MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
                     {
-                        //Refresh the vacation list data asynchronously
-                        await RefreshVacationListData();
+                        //Refresh the Movies list data asynchronously
+                        await RefreshMoviesListData();
                         //Unsubscribe from the MessagingCenter event after refreshing data
-                        MessagingCenter.Unsubscribe<Vacation>(this, "AddVacation");
+                        MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
                     });
                 });
             }
         }
 
-        //Command to navigate to the VacationMgmtView and handle Updates
+        //Command to navigate to the MoviesMgmtView and handle Updates
         public Command UpdateCommand
         {
             get
             {
-                return new Command<Vacation>((Vacation vacation) =>
+                return new Command<Movies>((Movies Movies) =>
                 {
                     //Unsubscribe from events - precautionary step to ensure that there are no existing subscriptions for the specified events
-                    MessagingCenter.Unsubscribe<Vacation>(this, "UpdateVacation");
+                    MessagingCenter.Unsubscribe<Movies>(this, "UpdateMovies");
 
-                    //Navigate to the VacationAddView, passing a vacation if available
-                    Application.Current.MainPage.Navigation.PushAsync(new VacationMgmtView(vacation));
+                    //Navigate to the MoviesAddView, passing a Movies if available
+                    Application.Current.MainPage.Navigation.PushAsync(new MoviesMgmtView(Movies));
 
-                    //Subscribe to a MessagingCenter event for refreshing data when a new vacation is updated
-                    MessagingCenter.Subscribe<Vacation>(this, "UpdateVacation", async (data) =>
+                    //Subscribe to a MessagingCenter event for refreshing data when a new Movies is updated
+                    MessagingCenter.Subscribe<Movies>(this, "UpdateMovies", async (data) =>
                     {
-                        // Refresh the vacation list data asynchronously
-                        await RefreshVacationListData();
+                        // Refresh the Movies list data asynchronously
+                        await RefreshMoviesListData();
                         // Unsubscribe from the MessagingCenter event after refreshing data
-                        MessagingCenter.Unsubscribe<Vacation>(this, "UpdateVacation");
+                        MessagingCenter.Unsubscribe<Movies>(this, "UpdateMovies");
                     });
                 });
             }
         }
 
-        //Command to delete a vacation and update the collection
-        public Command<Vacation> DeleteCommand
+        //Command to delete a Movies and update the collection
+        public Command<Movies> DeleteCommand
         {
             get
             {
-                return new Command<Vacation>((Vacation vacation) =>
+                return new Command<Movies>((Movies Movies) =>
                 {
-                    //Delete the vacation from the SQLite database
-                    _ = _sqliteService.DeleteVacation(vacation.Id);
+                    //Delete the Movies from the SQLite database
+                    _ = _sqliteService.DeleteMovies(Movies.Id);
 
-                    //Remove the vacation from the ViewModel's collection
-                    VacationCollection.Remove(vacation);
+                    //Remove the Movies from the ViewModel's collection
+                    MoviesCollection.Remove(Movies);
                 });
             }
         }
@@ -119,15 +119,15 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
 
 
 /*
-                     //Subscribe to a MessagingCenter event for refreshing data when a new vacation is added
-                    //MessagingCenter.Subscribe<VacationAddViewModel, Vacation>(this, "AddVacation", async (sender, addedVacation) =>
-                    MessagingCenter.Subscribe<Vacation>(this, "AddVacation", async (data) =>
+                     //Subscribe to a MessagingCenter event for refreshing data when a new Movies is added
+                    //MessagingCenter.Subscribe<MoviesAddViewModel, Movies>(this, "AddMovies", async (sender, addedMovies) =>
+                    MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
                     {
-                        //Refresh the vacation list data asynchronously
-                        await RefreshVacationListData();
+                        //Refresh the Movies list data asynchronously
+                        await RefreshMoviesListData();
 
                         //Unsubscribe from the MessagingCenter event after refreshing data
-                        MessagingCenter.Unsubscribe<Vacation>(this, "AddVacation");
-                        //MessagingCenter.Unsubscribe<VacationAddViewModel, Vacation>(this, "AddVacation");
+                        MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
+                        //MessagingCenter.Unsubscribe<MoviesAddViewModel, Movies>(this, "AddMovies");
                     });
 */

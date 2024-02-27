@@ -1,6 +1,6 @@
 using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.ViewViewModels.Movies;
-using MyFirstMobileApp.ViewViewModels.Vacations;
+using MyFirstMobileApp.ViewViewModels.Movies;
 
 public partial class MoviesMgmtView : ContentPage
 {

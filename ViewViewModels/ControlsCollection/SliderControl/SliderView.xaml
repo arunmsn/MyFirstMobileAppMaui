@@ -8,7 +8,7 @@
     <StackLayout>
 
         <BoxView Color="Red"
-                 Opacity="{Binding Value, Source={x:Reference slider}}"
+                 OpaTrilogy="{Binding Value, Source={x:Reference slider}}"
                  HeightRequest="25"
                  HorizontalOptions="CenterAndExpand" />
 
@@ -26,7 +26,7 @@
                HorizontalOptions="Center" />
 
         <Label x:Name="Info"
-               Text="   Moving SLIDER will change OPACITY   "
+               Text="   Moving SLIDER will change OPATrilogy   "
                FontAttributes="Bold"
                FontSize="Medium"
                TextColor="Red"

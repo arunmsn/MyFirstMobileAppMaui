@@ -8,10 +8,10 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
     public class MoviesMgmtViewModel : BaseViewModel
     {
         //Properties to bind to the UI
-        public List<Movies> VacationCollection { get; set; }
-        public string Country { get; set; }
-        public string City { get; set; }
-        public int Visited { get; set; }
+        public List<Movies> MoviesCollection { get; set; }
+        public string Name { get; set; }
+        public string Trilogy { get; set; }
+        public int Watched { get; set; }
         public int Id { get; set; }
 
         //Text for the button based on whether it's an update or save operation
@@ -22,7 +22,7 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
         //readonly variable ensures it can only be assigned a value at the time of declaration or in the constructor
         private readonly SQLiteImplementation _sqliteService = new SQLiteImplementation();
 
-        //Constructor to initialize the ViewModel with existing vacation details if provided
+        //Constructor to initialize the ViewModel with existing Movies details if provided
         public MoviesMgmtViewModel(Movies movies)
         {
             //Initialize the collection
@@ -32,8 +32,8 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
             {
                 Title = TitleMovies.TitleUpdateMovies;
 
-                //If vacation exists, populate ViewModel properties
-                VacationCollection.Add(movies);
+                //If Movies exists, populate ViewModel properties
+                MoviesCollection.Add(movies);
                 Id = movies.Id;
                 Name = movies.Name;
                 Trilogy = movies.Trilogy;
@@ -45,47 +45,47 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
             {
                 Title = TitleMovies.TitleAddMovies;
 
-                //If no vacation provided, initialize a new one and set button text to "Save"
-                VacationCollection = new List<Vacation>();
+                //If no Movies provided, initialize a new one and set button text to "Save"
+                MoviesCollection = new List<Movies>();
 
                 ButtonText = "Save";
             }
         }
 
-        //Command for saving or updating vacation details
-        public Command<Vacation> PerformSave
+        //Command for saving or updating Movies details
+        public Command<Movies> PerformSave
         {
             get
             {
-                return new Command<Vacation>(async (Vacation vacation) =>
+                return new Command<Movies>(async (Movies Movies) =>
                 {
                     try
                     {
                         //Check for required data before save or update
-                        if (string.IsNullOrEmpty(Country) || string.IsNullOrEmpty(City))
+                        if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Trilogy))
                         {
-                            await Application.Current.MainPage.DisplayAlert("Message", "Country and City are required.", "Ok");
+                            await Application.Current.MainPage.DisplayAlert("Message", "Name and Trilogy are required.", "Ok");
                             return;
                         }
 
                         if (ButtonText == "Save")
                         {
-                            //Creating a new Vacation instance with ViewModel properties
-                            vacation = new Vacation
+                            //Creating a new Movies instance with ViewModel properties
+                            Movies = new Movies
                             {
                                 Id = Id,
-                                Country = Country,
-                                City = City,
-                                Visited = Visited
+                                Name = Name,
+                                Trilogy = Trilogy,
+                                Watched = Watched
                             };
 
-                            //Save the new vacation
-                            string result = await _sqliteService.SaveVacation(vacation);
+                            //Save the new Movies
+                            string result = await _sqliteService.SaveMovies(Movies);
 
                             if (result == string.Empty)
                             {
-                                //Send a message to notify about the addition of a new vacation
-                                MessagingCenter.Send<Vacation>(vacation, "AddVacation");
+                                //Send a message to notify about the addition of a new Movies
+                                MessagingCenter.Send<Movies>(Movies, "AddMovies");
 
                                 if (Application.Current.MainPage != null)
                                 {
@@ -99,22 +99,22 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
                         }
                         else
                         {
-                            //Creating a new Vacation instance with ViewModel properties for an update
-                            vacation = new Vacation
+                            //Creating a new Movies instance with ViewModel properties for an update
+                            Movies = new Movies
                             {
                                 Id = Id,
-                                Country = Country,
-                                City = City,
-                                Visited = Visited
+                                Name = Name,
+                                Trilogy = Trilogy,
+                                Watched = Watched
                             };
 
-                            //Update the existing vacation details
-                            bool result = await _sqliteService.UpdateVacation(vacation);
+                            //Update the existing Movies details
+                            bool result = await _sqliteService.UpdateMovies(Movies);
 
                             if (result)
                             {
-                                //Send a message to notify about the update of the vacation
-                                MessagingCenter.Send<Vacation>(vacation, "UpdateVacation");
+                                //Send a message to notify about the update of the Movies
+                                MessagingCenter.Send<Movies>(Movies, "UpdateMovies");
                                 await Application.Current.MainPage.Navigation.PopAsync();
                             }
                             else

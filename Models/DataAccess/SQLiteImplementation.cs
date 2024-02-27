@@ -43,27 +43,27 @@ namespace MyFirstMobileApp.Models.DataAccess
                 //Initialize SQLite connection
                 con = new SQLiteAsyncConnection(path);
 
-                //Create 'Vacation' table if it does not exist
+                //Create 'Movies' table if it does not exist
                 await con.CreateTableAsync<Movies>();
             }
         }
 
-        //Method to retrieve all vacations from the 'Vacation' table
+        //Method to retrieve all Moviess from the 'Movies' table
         public async Task<List<Movies>> GetMovies()
         {
             //Use the returned connection from InitializeDatabase
             await InitializeDatabase();
 
-            //SQL query to select all rows from 'Vacation' table
+            //SQL query to select all rows from 'Movies' table
             string sql = "SELECT * FROM Movies";
 
-            //Execute the query and retrieve a list of vacations
+            //Execute the query and retrieve a list of Moviess
             List<Movies> movies = await con.QueryAsync<Movies>(sql);
 
             return movies;
         }
 
-        //Method to save a new vacation record
+        //Method to save a new Movies record
         public async Task<string> SaveMovie(Movies movies)
         {
             string result = string.Empty;
@@ -72,19 +72,19 @@ namespace MyFirstMobileApp.Models.DataAccess
             {
                 await InitializeDatabase();
 
-                //Check if a record with the same Country and City already exists
+                //Check if a record with the same Name and Trilogy already exists
                 var existingMovies = await con.Table<Movies>()
                       .Where(v => v.Name == movies.Name && v.Trilogy == movies.Trilogy)
                       .FirstOrDefaultAsync();
 
                 if (existingMovies == null)
                 {
-                    //Insert the vacation record into the 'Vacation' table
+                    //Insert the Movies record into the 'Movies' table
                     await con.InsertAsync(movies);
                 }
                 else
                 {
-                    //Record with the same Country and City already exists
+                    //Record with the same Name and Trilogy already exists
                     string msg = movies.Name + " and " + movies.Trilogy + " already exists.";
                     //await Application.Current.MainPage.DisplayAlert("Message", msg, "Ok");
 
@@ -99,7 +99,7 @@ namespace MyFirstMobileApp.Models.DataAccess
             return result;
         }
 
-        //Method to update an existing vacation record
+        //Method to update an existing Movies record
         public async Task<bool> UpdateMovies(Movies movies)
         {
             bool res = false;
@@ -111,7 +111,7 @@ namespace MyFirstMobileApp.Models.DataAccess
 
                 //$ is short-hand for String.Format, used with string 
                 //interpolations (e.g. {0}).  Used in C# 6.0
-                //SQL query to update vacation details based on the provided Id
+                //SQL query to update Movies details based on the provided Id
                 string sql = $"UPDATE Movies " +
                                   $"SET Name = '{movies.Name}', " +
                                   $"Trilogy = '{movies.Trilogy}', " +
@@ -130,7 +130,7 @@ namespace MyFirstMobileApp.Models.DataAccess
             return res;
         }
 
-        //Method to delete a vacation record based on the provided Id
+        //Method to delete a Movies record based on the provided Id
         public async Task<bool> DeleteMovies(int Id)
         {
             bool res = false;
@@ -149,7 +149,7 @@ namespace MyFirstMobileApp.Models.DataAccess
 
                 if (movieToDelete != null)
                 {
-                    //Delete the retrieved vacation
+                    //Delete the retrieved Movies
                     await con.DeleteAsync(movieToDelete);
                     res = true;
                 }

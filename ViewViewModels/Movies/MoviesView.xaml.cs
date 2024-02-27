@@ -1,6 +1,6 @@
-namespace MyFirstMobileApp.ViewViewModels.Vacations;
+namespace MyFirstMobileApp.ViewViewModels.Moviess;
 
-public partial class VacationView : ContentPage
+public partial class MoviesView : ContentPage
 {
     public void MoviesView()
     {
