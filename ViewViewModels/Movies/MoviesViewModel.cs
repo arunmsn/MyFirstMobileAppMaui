@@ -1,7 +1,7 @@
 ﻿using MyFirstMobileApp.Models.DataAccess;
 using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.Models.Titles;
-using MyFirstMobileApp.ViewModels;
+using MyFirstMobileApp.ViewViewModels.Base;
 using System.Collections.ObjectModel;
 
 namespace MyFirstMobileApp.ViewViewModels.Vacations
@@ -12,41 +12,41 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
         private readonly SQLiteImplementation _sqliteService = new SQLiteImplementation();
 
         //Collection to hold vacation data for the UI
-        private ObservableCollection<Movies> _vacationCollection;
+        private ObservableCollection<Movies> _moviesCollection;
 
         //Property to expose the vacation collection to the UI
-        public ObservableCollection<Movies> VacationCollection
+        public ObservableCollection<Movies> MoviesCollection
         {
             get { return _moviesCollection; }
             set
             {
-                _vacationCollection = value;
+                _moviesCollection = value;
                 OnPropertyChanged();
                 //Debug.WriteLine($"VacationCollection Count: {_vacationCollection?.Count}");
             }
         }
 
         //Constructor to initialize the ViewModel
-        public VacationViewModel()
+        public MoviesViewModel()
         {
-            Title = TitleVacations.TitleVacation;
+            Title = TitleMovies.TitleMovie;
 
             //Initialize the vacation collection
-            VacationCollection = new ObservableCollection<Vacation>();
+            MoviesCollection = new ObservableCollection<Movies>();
 
             //Trigger an asynchronous refresh of the vacation list data
-            Task.Run(async () => await RefreshVacationListData());
+            Task.Run(async () => await RefreshMoviesListData());
 
-            _ = RefreshVacationListData();
+            _ = RefreshMoviesListData();
         }
 
-        public async Task RefreshVacationListData()
+        public async Task RefreshMoviesListData()
         {
             // Retrieve vacation data from the SQLite database
-            var vacation = await _sqliteService.GetVacation();
+            var vacation = await _sqliteService.GetMovie();
 
             // Update the ViewModel's vacation collection with the new data
-            VacationCollection = new ObservableCollection<Vacation>(vacation);
+            MoviesCollection = new ObservableCollection<Movies>(vacation);
         }
 
         //Command to navigate to the VacationMgmtView and handle Adds
@@ -54,7 +54,7 @@ namespace MyFirstMobileApp.ViewViewModels.Vacations
         {
             get
             {
-                return new Command<Vacation>((Vacation vacation) =>
+                return new Command<Movies>((Movies movies) =>
                 {
                     //Unsubscribe from events - precautionary step to ensure that there are no existing subscriptions for the specified events
                     MessagingCenter.Unsubscribe<Vacation>(this, "AddVacation");
