@@ -57,7 +57,7 @@ namespace MyFirstMobileApp.ViewViewModels.MovieSQL
         {
             get
             {
-                return new Command<Movies>(async (Movies) =>
+                return new Command<Movies>(async (movies) =>
                 {
                     try
                     {
@@ -71,7 +71,7 @@ namespace MyFirstMobileApp.ViewViewModels.MovieSQL
                         if (ButtonText == "Save")
                         {
                             //Creating a new Movies instance with ViewModel properties
-                            Movies = new Movies
+                            movies = new Movies
                             {
                                 Id = Id,
                                 Name = Name,
@@ -80,12 +80,12 @@ namespace MyFirstMobileApp.ViewViewModels.MovieSQL
                             };
 
                             //Save the new Movies
-                            string result = await _sqliteService.SaveMovie(Movies);
+                            string result = await _sqliteService.SaveMovie(movies);
 
                             if (result == string.Empty)
                             {
                                 //Send a message to notify about the addition of a new Movies
-                                MessagingCenter.Send<Movies>(Movies, "AddMovies");
+                                MessagingCenter.Send<Movies>(movies, "AddMovies");
 
                                 if (Application.Current.MainPage != null)
                                 {
@@ -100,7 +100,7 @@ namespace MyFirstMobileApp.ViewViewModels.MovieSQL
                         else
                         {
                             //Creating a new Movies instance with ViewModel properties for an update
-                            Movies = new Movies
+                            movies = new Movies
                             {
                                 Id = Id,
                                 Name = Name,
@@ -109,12 +109,12 @@ namespace MyFirstMobileApp.ViewViewModels.MovieSQL
                             };
 
                             //Update the existing Movies details
-                            bool result = await _sqliteService.UpdateMovies(Movies);
+                            bool result = await _sqliteService.UpdateMovies(movies);
 
                             if (result)
                             {
                                 //Send a message to notify about the update of the Movies
-                                MessagingCenter.Send<Movies>(Movies, "UpdateMovies");
+                                MessagingCenter.Send<Movies>(movies, "UpdateMovies");
                                 await Application.Current.MainPage.Navigation.PopAsync();
                             }
                             else
