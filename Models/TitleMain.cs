@@ -13,5 +13,6 @@ namespace MyFirstMobileApp.Models
         public static String ImagesTitle { get; } = "Images";
         public static String CollectionsTitle { get; } = "Collections";
         public static String ControlsTitle { get; } = "Controls";
+        public static String SQLTitle { get; } = "SQLite";
     }
 }

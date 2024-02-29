@@ -4,7 +4,7 @@ using MyFirstMobileApp.Models.Titles;
 using MyFirstMobileApp.ViewViewModels.Base;
 using System.Collections.ObjectModel;
 
-namespace MyFirstMobileApp.ViewViewModels.Moviess
+namespace MyFirstMobileApp.ViewViewModels.MovieSQL
 {
     //ViewModel for managing Movies data
     public class MoviesViewModel : BaseViewModel
@@ -43,7 +43,7 @@ namespace MyFirstMobileApp.ViewViewModels.Moviess
         public async Task RefreshMoviesListData()
         {
             // Retrieve Movies data from the SQLite database
-            var Movies = await _sqliteService.GetMovie();
+            var Movies = await _sqliteService.GetMovies();
 
             // Update the ViewModel's Movies collection with the new data
             MoviesCollection = new ObservableCollection<Movies>(Movies);
@@ -54,13 +54,13 @@ namespace MyFirstMobileApp.ViewViewModels.Moviess
         {
             get
             {
-                return new Command<Movies>((Movies movies) =>
+                return new Command<Movies>((movies) =>
                 {
                     //Unsubscribe from events - precautionary step to ensure that there are no existing subscriptions for the specified events
                     MessagingCenter.Unsubscribe<Movies>(this, "AddMovies");
 
                     //Navigate to the MoviesAddView, passing a Movies if available
-                    Application.Current.MainPage.Navigation.PushAsync(new MoviesMgmtView(Movies));
+                    Application.Current.MainPage.Navigation.PushAsync(new MoviesMgmtView(movies));
 
                     //Subscribe to a MessagingCenter event for refreshing data when a new Movies is added
                     MessagingCenter.Subscribe<Movies>(this, "AddMovies", async (data) =>
@@ -79,7 +79,7 @@ namespace MyFirstMobileApp.ViewViewModels.Moviess
         {
             get
             {
-                return new Command<Movies>((Movies Movies) =>
+                return new Command<Movies>((Movies) =>
                 {
                     //Unsubscribe from events - precautionary step to ensure that there are no existing subscriptions for the specified events
                     MessagingCenter.Unsubscribe<Movies>(this, "UpdateMovies");
@@ -104,7 +104,7 @@ namespace MyFirstMobileApp.ViewViewModels.Moviess
         {
             get
             {
-                return new Command<Movies>((Movies Movies) =>
+                return new Command<Movies>((Movies) =>
                 {
                     //Delete the Movies from the SQLite database
                     _ = _sqliteService.DeleteMovies(Movies.Id);

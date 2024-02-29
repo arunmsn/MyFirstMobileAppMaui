@@ -20,6 +20,7 @@
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
                 <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -44,6 +45,10 @@
                     Grid.Column="1"
                     Text="{Binding ControlsTitle}"
                     Command="{Binding OnControlsClicked}" />
+            <Button Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding MovieSQLTitle}"
+                    Command="{Binding OnSQLClicked}" />
         </Grid>
     </VerticalStackLayout>
 

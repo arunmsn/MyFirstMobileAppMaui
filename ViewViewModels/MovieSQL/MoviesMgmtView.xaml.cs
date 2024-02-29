@@ -1,6 +1,8 @@
 using MyFirstMobileApp.Models.Entities;
-using MyFirstMobileApp.ViewViewModels.Movies;
-using MyFirstMobileApp.ViewViewModels.Movies;
+using MyFirstMobileApp.ViewViewModels.MovieSQL;
+
+
+namespace MyFirstMobileApp.ViewViewModels.MovieSQL;
 
 public partial class MoviesMgmtView : ContentPage
 {

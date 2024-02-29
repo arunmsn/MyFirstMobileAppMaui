@@ -4,6 +4,7 @@ using MyFirstMobileApp.ViewViewModels.Base;
 using MyFirstMobileApp.ViewViewModels.CollectionsContents.SWMoviesCollection;
 using MyFirstMobileApp.ViewViewModels.ControlsCollection;
 using MyFirstMobileApp.ViewViewModels.Layouts.StackLayoutContents;
+using MyFirstMobileApp.ViewViewModels.Moviess;
 using System.Windows.Input;
 
 namespace MyFirstMobileApp.ViewViewModels.Main
@@ -14,6 +15,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         public string ImagesTitle { get; set; } = TitleMain.ImagesTitle;
         public string CollectionsTitle { get; set; } = TitleMain.CollectionsTitle;
         public string ControlsTitle { get; set; } = TitleMain.ControlsTitle;
+        public string MovieSQLTitle { get; set; } = TitleMain.SQLTitle;
 
 
         //Button Commands
@@ -21,6 +23,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         public ICommand OnImagesClicked { get; set; }
         public ICommand OnCollectionsClicked { get; set; }
         public ICommand OnControlsClicked { get; set; }
+        public ICommand OnSQLClicked { get; set; }
 
         public MainViewModel()
         {
@@ -35,6 +38,7 @@ namespace MyFirstMobileApp.ViewViewModels.Main
             OnImagesClicked = new Command(OnImagesClickedAsync);
             OnCollectionsClicked = new Command(OnCollectionsClickedAsync);
             OnControlsClicked = new Command(OnControlsClickedAsync);
+            OnSQLClicked = new Command(OnSQLClickedAsync);
 
         }
 
@@ -54,6 +58,10 @@ namespace MyFirstMobileApp.ViewViewModels.Main
         private async void OnControlsClickedAsync()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ControlsView());
+        }
+        private async void OnSQLClickedAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new MoviesView());
         }
     }
 }

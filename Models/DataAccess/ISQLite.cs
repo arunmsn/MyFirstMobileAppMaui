@@ -1,6 +1,4 @@
-﻿using Android.Graphics;
-using MyFirstMobileApp.Models.Entities;
-using SQLite;
+﻿using MyFirstMobileApp.Models.Entities;
 
 namespace MyFirstMobileApp.Models.DataAccess
 {

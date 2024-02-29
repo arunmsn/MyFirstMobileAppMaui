@@ -63,10 +63,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ViewViewModels\Movies\MoviesMgmtView.xaml">
+	  <MauiXaml Update="ViewViewModels\MovieSQL\MoviesMgmtView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ViewViewModels\Movies\MoviesView.xaml">
+	  <MauiXaml Update="ViewViewModels\MovieSQL\MoviesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ViewViewModels\AppImages\Activity\ActivityIndicatorView.xaml">

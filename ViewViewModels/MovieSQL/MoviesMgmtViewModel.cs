@@ -3,7 +3,7 @@ using MyFirstMobileApp.Models.Entities;
 using MyFirstMobileApp.Models.Titles;
 using MyFirstMobileApp.ViewViewModels.Base;
 
-namespace MyFirstMobileApp.ViewViewModels.Movies
+namespace MyFirstMobileApp.ViewViewModels.MovieSQL
 {
     public class MoviesMgmtViewModel : BaseViewModel
     {
@@ -23,7 +23,7 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
         private readonly SQLiteImplementation _sqliteService = new SQLiteImplementation();
 
         //Constructor to initialize the ViewModel with existing Movies details if provided
-        public MoviesMgmtViewModel(Movies movies)
+        public MoviesMgmtViewModel(Models.Entities.Movies movies)
         {
             //Initialize the collection
             MoviesCollection = new List<Movies>();
@@ -57,7 +57,7 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
         {
             get
             {
-                return new Command<Movies>(async (Movies Movies) =>
+                return new Command<Movies>(async (Movies) =>
                 {
                     try
                     {
@@ -80,7 +80,7 @@ namespace MyFirstMobileApp.ViewViewModels.Movies
                             };
 
                             //Save the new Movies
-                            string result = await _sqliteService.SaveMovies(Movies);
+                            string result = await _sqliteService.SaveMovie(Movies);
 
                             if (result == string.Empty)
                             {

@@ -125,6 +125,7 @@ namespace MyFirstMobileApp.Models.DataAccess
             catch (Exception ex)
             {
                 // Handle exceptions
+                throw;
             }
 
             return res;
